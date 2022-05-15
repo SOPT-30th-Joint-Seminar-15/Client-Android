@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">joint15_29cm</string>
+
+    <!--문의내용 뷰-->
+    <string name="what">joint15_29cm</string>
+    <!--문의하기 뷰-->
+    <string name="whatt">joint15_29cm</string>
+
+</resources>
