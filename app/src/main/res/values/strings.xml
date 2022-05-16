@@ -10,7 +10,8 @@
     <string name="empty_consulting_list">내역이 없습니다.</string>
     <string name="tools_consulting_day">2022–05–16</string>
     <string name="tools_consulting_title">회원제도문의</string>
-    <string name="tools_consulting_finished">No</string>
+    <string name="inquiry_no">No</string>
+    <string name="inquiry_yes">Yes</string>
     <string name="tools_consulting_delete_btn">삭제</string>
     <!--문의하기 뷰-->
     <string name="whatt">joint15_29cm</string>
