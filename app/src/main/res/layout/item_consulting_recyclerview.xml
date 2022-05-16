@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/app_horizontal_padding"
+        android:background="@color/white_29cm"
+        android:paddingTop="14dp"
+        android:paddingBottom="18dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_item_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Widget.GlobalTextView.Appearance_quick_12_Grey3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/tools_consulting_day" />
+
+        <TextView
+            android:id="@+id/tv_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:textAppearance="@style/Widget.GlobalTextView.Appearance_Noto_12_Bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_day"
+            tools:text="@string/tools_consulting_title" />
+
+        <TextView
+            android:id="@+id/tv_item_finished"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Widget.GlobalTextView.Appearance_quick_11_Grey2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_title"
+            tools:text="@string/tools_consulting_finished" />
+
+        <Button
+            style="@style/Widget.DeleteButton.Style_Noto_12_Regular"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="@string/tools_consulting_delete_btn" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/item_layout_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey04_29cm"
+        android:orientation="vertical"
+        android:padding="@dimen/app_horizontal_padding"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/constraint">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q."
+            android:textAppearance="@style/Widget.GlobalTextView.Appearance_Neo_20_Bold" />
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:lineHeight="24dp"
+            android:textAppearance="@style/Widget.GlobalTextView.Appearance_Noto_12_Regular_Black"
+            tools:text="어쩌구\n 저쩌구"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="A."
+            android:textAppearance="@style/Widget.GlobalTextView.Appearance_Neo_20_Bold" />
+
+        <TextView
+            android:id="@+id/tv_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:lineHeight="24dp"
+            android:textAppearance="@style/Widget.GlobalTextView.Appearance_Noto_12_Regular_Black"
+            tools:ignore="UnusedAttribute" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
