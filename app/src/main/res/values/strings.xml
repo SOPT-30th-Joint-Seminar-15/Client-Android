@@ -2,7 +2,16 @@
     <string name="app_name">joint15_29cm</string>
 
     <!--문의내용 뷰-->
-    <string name="what">joint15_29cm</string>
+    <string name="title">1:1문의내역</string>
+    <string name="consulting_title">상담시간</string>
+    <string name="consulting_main">평일(월 ~ 금) 10:00~17:00\n(Off-time 12:00 ~ 14:00, 토/일 공휴일 휴무)</string>
+    <string name="consulting_detail">ㆍ 한 번 등록한 상담내용은 수정이 불가능합니다.\nㆍ 향후 멤버쉽 단계별 혜택 및 선정기준은 사전공지 후 변경될 수 있습\n니다.</string>
+    <string name="btn_consulting">1:1문의 쓰기</string>
+    <string name="empty_consulting_list">내역이 없습니다.</string>
+    <string name="tools_consulting_day">2022–05–16</string>
+    <string name="tools_consulting_title">회원제도문의</string>
+    <string name="tools_consulting_finished">No</string>
+    <string name="tools_consulting_delete_btn">삭제</string>
     <!--문의하기 뷰-->
     <string name="whatt">joint15_29cm</string>
 

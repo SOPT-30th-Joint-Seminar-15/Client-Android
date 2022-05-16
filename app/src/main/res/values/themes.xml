@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Joint15_29cm" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.Joint15_29cm" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/black</item>
         <item name="colorPrimaryVariant">@color/black</item>
@@ -10,8 +10,88 @@
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
         <item name="android:includeFontPadding">false</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+    <style name="Widget.GlobalTextView.Appearance_Noto_18_Medium" parent="">
+        <item name="android:textColor">@color/black01_29cm</item>
+        <item name="android:textSize">@dimen/text_noto_18</item>
+        <item name="android:fontFamily">@font/notosanskr_medium</item>
+    </style>
+
+    <style name="Widget.GlobalTextView.Appearance_Noto_15_Bold" parent="">
+        <item name="android:textColor">@color/black02_29cm</item>
+        <item name="android:textSize">@dimen/text_noto_15</item>
+        <item name="android:fontFamily">@font/notosanskr_bold</item>
+    </style>
+
+    <style name="Widget.GlobalTextView.Appearance_Noto_13_Regular" parent="">
+        <item name="android:textColor">@color/black02_29cm</item>
+        <item name="android:textSize">@dimen/text_noto_13</item>
+        <item name="android:fontFamily">@font/notosanskr_regular</item>
+    </style>
+
+    <style name="Widget.DeleteButton.Style_Noto_12_Regular" parent="">
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginTop">11dp</item>
+        <item name="android:textColor">@color/black02_29cm</item>
+        <item name="android:background">@drawable/stroke_btn_basic</item>
+        <item name="android:textAppearance">
+            @style/Widget.GlobalTextView.Appearance_Noto_12_Regular_Black
+        </item>
+    </style>
+
+    <style name="Widget.GlobalTextView.Appearance_Noto_12_Regular_Black" parent="">
+        <item name="android:textColor">@color/black02_29cm</item>
+        <item name="android:textSize">@dimen/text_noto_12</item>
+        <item name="android:fontFamily">@font/notosanskr_regular</item>
+    </style>
+
+    <style name="Widget.ConsultingButton.Style_Noto_12_Regular_White" parent="">
+        <item name="android:layout_marginTop">11dp</item>
+        <item name="android:background">@color/black02_29cm</item>
+        <item name="android:textAppearance">
+            @style/Widget.ConsultingButton.Appearance_Noto_12_Regular_White
+        </item>
+    </style>
+
+    <style name="Widget.ConsultingButton.Appearance_Noto_12_Regular_White" parent="">
+        <item name="android:textColor">@color/white_29cm</item>
+        <item name="android:textSize">@dimen/text_noto_12</item>
+        <item name="android:fontFamily">@font/notosanskr_regular</item>
+    </style>
+
+    <style name="Widget.GlobalTextView.Appearance_Noto_12_Bold" parent="">
+        <item name="android:textColor">@color/black02_29cm</item>
+        <item name="android:textSize">@dimen/text_noto_12</item>
+        <item name="android:fontFamily">@font/notosanskr_bold</item>
+    </style>
+
+    <style name="Widget.GlobalTextView.Appearance_Noto_11_Regular_Grey" parent="">
+        <item name="android:textColor">@color/grey02_29cm</item>
+        <item name="android:textSize">@dimen/text_noto_11</item>
+        <item name="android:fontFamily">@font/notosanskr_regular</item>
+    </style>
+
+    <style name="Widget.GlobalTextView.Appearance_Neo_20_Bold" parent="">
+        <item name="android:textColor">@color/black02_29cm</item>
+        <item name="android:textSize">@dimen/text_neo_20</item>
+        <item name="android:fontFamily">@font/spoqahansansneo_bold</item>
+    </style>
+
+    <style name="Widget.GlobalTextView.Appearance_quick_11_Grey2" parent="">
+        <item name="android:textColor">@color/grey02_29cm</item>
+        <item name="android:textSize">@dimen/text_noto_11</item>
+        <item name="android:fontFamily">@font/quicksand_semibold</item>
+    </style>
+
+    <style name="Widget.GlobalTextView.Appearance_quick_12_Grey3" parent="">
+        <item name="android:textColor">@color/grey03_29cm</item>
+        <item name="android:textSize">@dimen/text_noto_12</item>
+        <item name="android:fontFamily">@font/quicksand_semibold</item>
+    </style>
+
 </resources>

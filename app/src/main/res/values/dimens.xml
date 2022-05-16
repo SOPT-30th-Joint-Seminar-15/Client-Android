@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_noto_18">18sp</dimen>
+    <dimen name="text_noto_15">15sp</dimen>
+    <dimen name="text_noto_13">13sp</dimen>
+    <dimen name="text_noto_12">12sp</dimen>
+    <dimen name="text_noto_11">11sp</dimen>
+    <dimen name="text_neo_20">20sp</dimen>
+    <dimen name="app_horizontal_padding">19dp</dimen>
+    <dimen name="margin_38">38dp</dimen>
+    <dimen name="margin_43">43dp</dimen>
+</resources>
