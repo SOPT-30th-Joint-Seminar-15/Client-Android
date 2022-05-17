@@ -19,11 +19,13 @@
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout/activity_create.xml" value="0.264" />
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout/activity_read.xml" value="0.1" />
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout/inquiry_toolbar.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/82109/Desktop/and/Client-Android/app/src/main/res/layout/activity_create.xml" value="0.25" />
+        <entry key="..\:/Users/82109/Desktop/and/Client-Android/app/src/main/res/layout/activity_read.xml" value="0.3958333333333333" />
         <entry key="..\:/Users/82109/Desktop/and/joint15_29cm/app/src/main/res/font/fontfamily.xml" value="0.20092592592592592" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
