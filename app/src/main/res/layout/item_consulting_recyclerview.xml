@@ -64,7 +64,7 @@
                 android:stateListAnimator="@null"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                tools:text="@string/tools_consulting_delete_btn" />
+                android:text="@string/tools_consulting_delete_btn" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

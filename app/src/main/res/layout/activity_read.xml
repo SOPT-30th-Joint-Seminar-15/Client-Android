@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white_29cm"
     tools:context=".feature.mino.ReadActivity">
 
     <include
@@ -66,7 +67,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_consulting"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@id/tabLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
@@ -77,7 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:paddingBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_consulting"
         app:tabIndicatorAnimationMode="fade"
         app:tabIndicatorFullWidth="false"
         app:tabIndicatorHeight="1dp"
