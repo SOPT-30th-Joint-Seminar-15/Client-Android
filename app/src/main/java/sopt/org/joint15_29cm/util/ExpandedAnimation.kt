@@ -8,8 +8,6 @@ import android.view.animation.Transformation
 class ExpandedAnimation {
 
     companion object {
-
-
         fun expand(view: View) {
             val animation = expandAction(view)
             view.startAnimation(animation)
@@ -19,7 +17,6 @@ class ExpandedAnimation {
             view.measure(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
             val actualHeight = view.measuredHeight
             view.layoutParams.height = 0
-            view.visibility = View.VISIBLE
             val animation = object : Animation() {
                 override fun applyTransformation(interpolatedTime: Float, t: Transformation?) {
                     view.layoutParams.height =
@@ -30,6 +27,7 @@ class ExpandedAnimation {
             }
             animation.duration =
                 (actualHeight / view.context.resources.displayMetrics.density).toLong()
+            view.visibility = View.VISIBLE
             view.startAnimation(animation)
             return animation
         }
@@ -52,5 +50,4 @@ class ExpandedAnimation {
             view.startAnimation(animation)
         }
     }
-
 }

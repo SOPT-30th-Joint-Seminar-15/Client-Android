@@ -19,6 +19,7 @@ object BindingConversions {
                 view.load(url) {
                     crossfade(true)
                     transformations(CircleCropTransformation())
+                    size(450, 450)
                 }
             }
         }
