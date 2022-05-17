@@ -36,4 +36,8 @@
         <string name="create_etcsystem">시스템문의</string>
         <string name="create_etcetc">기타문의</string>
         <string name="create_etcdocument">증빙서류문의</string>
+    <string name="create_ordernumber">주문번호</string>
+    <string name="create_itemname">상품명</string>
+    <string name="create_orderdate">주문일자</string>
+    <string name="create_purchasemethod">결제방법</string>
 </resources>
