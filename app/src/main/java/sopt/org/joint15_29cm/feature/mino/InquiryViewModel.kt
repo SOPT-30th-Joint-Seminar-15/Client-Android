@@ -8,7 +8,6 @@ import androidx.lifecycle.ViewModel
 class InquiryViewModel : ViewModel() {
     private val inquiryList = MutableLiveData<List<InquiryData>>()
 
-
     fun getInquiryList(): LiveData<List<InquiryData>> = inquiryList
     fun setInquiryList(data: List<InquiryData>) {
         inquiryList.value = data

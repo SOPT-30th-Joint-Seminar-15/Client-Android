@@ -11,5 +11,6 @@ data class InquiryData(
     val inquiryMessage: String,
     val inquiryImage1:String?,
     val inquiryImage2:String?,
-    val answerMessage: String?
+    val answerMessage: String?,
+    var isExpanded:Boolean = false
 ) : Parcelable

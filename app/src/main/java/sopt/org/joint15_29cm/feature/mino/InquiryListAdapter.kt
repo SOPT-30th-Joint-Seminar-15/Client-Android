@@ -3,12 +3,13 @@ package sopt.org.joint15_29cm.feature.mino
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import sopt.org.joint15_29cm.databinding.ItemConsultingRecyclerviewBinding
 
-class InquiryListAdapter(private val itemClickListener: (View) -> Unit) :
+class InquiryListAdapter(private val itemClickListener: (InquiryData, LinearLayout) -> Unit) :
     ListAdapter<InquiryData, InquiryListAdapter.InquiryViewHolder>(InquiryListDiffUtil) {
 
 
@@ -28,14 +29,14 @@ class InquiryListAdapter(private val itemClickListener: (View) -> Unit) :
 
     class InquiryViewHolder(
         private val binding: ItemConsultingRecyclerviewBinding,
-        private val itemClickListener: (View) -> Unit
+        private val itemClickListener: (InquiryData, LinearLayout) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: InquiryData) {
             with(binding) {
                 inquiryModel = item
                 constraint.setOnClickListener {
-                    itemClickListener(itemLayoutDetail)
+                    itemClickListener(item, itemLayoutDetail)
                 }
             }
         }
