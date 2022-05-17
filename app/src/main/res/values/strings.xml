@@ -13,6 +13,8 @@
     <string name="inquiry_no">No</string>
     <string name="inquiry_yes">Yes</string>
     <string name="tools_consulting_delete_btn">삭제</string>
+    <string name="inquiry_page"><u>1</u></string>
+
     <!--문의하기 뷰-->
     <string name="whatt">joint15_29cm</string>
 

@@ -5,6 +5,9 @@ import android.view.View
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.DialogFragment
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import sopt.org.joint15_29cm.R
 import sopt.org.joint15_29cm.databinding.ActivityReadBinding
 import sopt.org.joint15_29cm.util.ExpandedAnimation
@@ -28,6 +31,12 @@ class ReadActivity : AppCompatActivity() {
                 InquiryData(0, "2022-05-12", "문의하기", "안녕하세요", "", "", "반가워요"),
                 InquiryData(1, "2022-05-13", "하기", "안녕하", "", "", "반가워요"),
                 InquiryData(2, "2022-05-14", "문하기", "안녕", "", "", "반가워요")
+            )
+        )
+        binding.rvConsulting.addItemDecoration(
+            DividerItemDecoration(
+                this,
+                LinearLayoutManager(this).orientation
             )
         )
         binding.rvConsulting.adapter = inquiryAdapter
