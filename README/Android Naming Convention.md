@@ -8,7 +8,7 @@
 
 
 ### 2. Android Resource Naming Rules
-
+<img src="https://user-images.githubusercontent.com/81347125/168896616-3a928b43-9c56-425a-81e1-c038f1f7ee06.png" width = "50%">
 - 기본 형식은 위 규칙을 따른다.
 
 
