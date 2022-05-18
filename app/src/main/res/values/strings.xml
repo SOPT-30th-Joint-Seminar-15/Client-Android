@@ -36,7 +36,22 @@
     <string name="create_etcsystem">시스템문의</string>
     <string name="create_etcetc">기타문의</string>
     <string name="create_etcdocument">증빙서류문의</string>
-
+    <string name="create_ordernumber">주문번호</string>
+    <string name="create_itemname">상품명</string>
+    <string name="create_orderdate">주문일자</string>
+    <string name="create_purchasemethod">결제방법</string>
+    <string name="create_name">성명</string>
+    <string name="create_id">아이디</string>
+    <string name="create_email">이메일</string>
+    <string name="create_changeemail">이메일 변경하기</string>
+    <string name="create_asktitlehint">제목을 입력하세요.</string>
+    <string name="create_askcontenthint">내용을 입력하세요.</string>
+    <string name="create_getemail">이메일 받기</string>
+    <string name="create_caution1">상품 불량 및 오배송의 경우, 해당 제품 사진을 등록 부탁드립니다.</string>
+    <string name="create_caution2">파일명은 영문만 가능하며, 파일당 최대 10MB 의용량 제한이 있습니다.</string>
+    <string name="create_caution3">가로사이즈가 450pixel을 초과하는 경우 자동으로 450픽셀로 조정됩니다.</string>
+    <string name="create_caution4">첨부파일은 최대 2개까지 등록가능합니다.</string>
+    <string name="create_registerbutton">등록하기</string>
 
     <!--다이얼로그 뷰-->
     <string name="create_register">등록되었습니다.</string>
