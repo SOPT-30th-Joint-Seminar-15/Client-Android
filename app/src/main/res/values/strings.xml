@@ -36,4 +36,14 @@
     <string name="create_etcsystem">시스템문의</string>
     <string name="create_etcetc">기타문의</string>
     <string name="create_etcdocument">증빙서류문의</string>
+
+
+    <!--다이얼로그 뷰-->
+    <string name="create_register">등록되었습니다.</string>
+    <string name="create_ok">확인</string>
+    <string name="read_delete">문의글을 삭제 하시겠습니까?</string>
+    <string name="read_ok">확인</string>
+    <string name="read_cancel">취소</string>
+
+
 </resources>

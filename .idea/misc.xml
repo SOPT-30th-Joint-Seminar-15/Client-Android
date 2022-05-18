@@ -3,29 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1015" />
-        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/create_button_background.xml" value="0.112" />
-        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/ic_btn_photo.xml" value="0.1015" />
-        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/ic_icn_back.xml" value="0.1015" />
-        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/ic_icn_button_off.xml" value="0.1015" />
-        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/ic_icn_button_on.xml" value="0.1" />
-        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/ic_icn_mycart.xml" value="0.1015" />
-        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/ic_icn_search.xml" value="0.1015" />
-        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/ic_icn_selectbox_off.xml" value="0.1015" />
-        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/ic_icn_selectbox_on.xml" value="0.1015" />
-        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1015" />
-        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/stroke_btn_basic.xml" value="0.112" />
-        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout-v28/activity_create.xml" value="0.19739583333333333" />
-        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout/activity_create.xml" value="0.264" />
-        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout/activity_read.xml" value="0.1" />
-        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout/inquiry_toolbar.xml" value="0.18333333333333332" />
-        <entry key="..\:/Users/82109/Desktop/and/Client-Android/app/src/main/res/layout/activity_create.xml" value="0.25" />
-        <entry key="..\:/Users/82109/Desktop/and/Client-Android/app/src/main/res/layout/activity_read.xml" value="0.3958333333333333" />
+        <entry key="..\:/Android-Client15/app/src/main/res/drawable/rectangle_dialog_button_background.xml" value="0.11" />
+        <entry key="..\:/Android-Client15/app/src/main/res/layout/activity_create.xml" value="0.67" />
+        <entry key="..\:/Android-Client15/app/src/main/res/layout/activity_read.xml" value="0.3828125" />
+        <entry key="..\:/Android-Client15/app/src/main/res/layout/dialog_create.xml" value="0.3828125" />
+        <entry key="..\:/Android-Client15/app/src/main/res/layout/dialog_read.xml" value="0.67" />
+        <entry key="..\:/Android-Client15/app/src/main/res/layout/item_consulting_recyclerview.xml" value="0.3828125" />
         <entry key="..\:/Users/82109/Desktop/and/joint15_29cm/app/src/main/res/font/fontfamily.xml" value="0.20092592592592592" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
