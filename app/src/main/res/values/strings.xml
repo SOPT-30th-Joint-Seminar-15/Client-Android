@@ -17,23 +17,33 @@
     <string name="create_title">1:1 문의내역</string>
     <string name="create_description">산업안전보건법 제 41조 시행령에 근거하여 2018년 10월 18일 부터 산업안전보건법에 따라 고객응대근로자 보호조치를 시행하고 있습니다. \n 고객응대근로자에게 폭언, 폭행 등을 하지 말아주세요.</string>
     <string name="create_purchasetitle">구매관련문의</string>
-        <string name="create_purchasedelivery">배송문의</string>
-        <string name="create_purchaseorder">주문문의</string>
-        <string name="create_purchasecancel">취소문의</string>
-        <string name="create_purchasereturn">반품문의</string>
-        <string name="create_purchaseexchange">교환문의</string>
-        <string name="create_purchaserefund">환불문의</string>
-        <string name="create_purchasegift">사은품문의</string>
-        <string name="create_purchasedeposit">입금문의</string>
+    <string name="create_purchasedelivery">배송문의</string>
+    <string name="create_purchaseorder">주문문의</string>
+    <string name="create_purchasecancel">취소문의</string>
+    <string name="create_purchasereturn">반품문의</string>
+    <string name="create_purchaseexchange">교환문의</string>
+    <string name="create_purchaserefund">환불문의</string>
+    <string name="create_purchasegift">사은품문의</string>
+    <string name="create_purchasedeposit">입금문의</string>
     <string name="create_defaulttitle">일반상담문의</string>
-        <string name="create_defaultuserinfo">회원정보문의</string>
-        <string name="create_defaultuserrule">회원제도문의</string>
-        <string name="create_defaultpurchaseinfo">결제방법문의</string>
-        <string name="create_defaultitem">상품문의</string>
-        <string name="create_defaultchosen">당첨문의</string>
-        <string name="create_defaultcoupon">쿠폰/마일리지문의</string>
+    <string name="create_defaultuserinfo">회원정보문의</string>
+    <string name="create_defaultuserrule">회원제도문의</string>
+    <string name="create_defaultpurchaseinfo">결제방법문의</string>
+    <string name="create_defaultitem">상품문의</string>
+    <string name="create_defaultchosen">당첨문의</string>
+    <string name="create_defaultcoupon">쿠폰/마일리지문의</string>
     <string name="create_etctitle">기타문의</string>
-        <string name="create_etcsystem">시스템문의</string>
-        <string name="create_etcetc">기타문의</string>
-        <string name="create_etcdocument">증빙서류문의</string>
+    <string name="create_etcsystem">시스템문의</string>
+    <string name="create_etcetc">기타문의</string>
+    <string name="create_etcdocument">증빙서류문의</string>
+
+
+    <!--다이얼로그 뷰-->
+    <string name="create_register">등록되었습니다.</string>
+    <string name="create_ok">확인</string>
+    <string name="read_delete">문의글을 삭제 하시겠습니까?</string>
+    <string name="read_ok">확인</string>
+    <string name="read_cancel">취소</string>
+
+
 </resources>
