@@ -13,13 +13,14 @@ class CustomDialog(private val context: AppCompatActivity) {
     private lateinit var bindingReadBinding: DialogReadBinding
     private val dialog = Dialog(context)
 
-    fun show(@LayoutRes layout: Int) {
+    fun showCreateDialog(@LayoutRes layout: Int) {
         binding = DialogCreateBinding.inflate(context.layoutInflater)
 
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(binding.root)
-        dialog.setCancelable(false)
-
+        dialog.apply {
+            requestWindowFeature(Window.FEATURE_NO_TITLE)
+            setContentView(binding.root)
+            setCancelable(false)
+        }
         binding.tvCreateOk.setOnClickListener {
             dialog.dismiss()
             context.finish()

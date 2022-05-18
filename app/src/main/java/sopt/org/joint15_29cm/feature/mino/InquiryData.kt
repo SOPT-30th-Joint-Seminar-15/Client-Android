@@ -9,8 +9,8 @@ data class InquiryData(
     val date: String,
     val type: String,
     val inquiryMessage: String,
-    val inquiryImage1:String?="",
-    val inquiryImage2:String?="",
-    val answerMessage: String?="",
-    var isExpanded:Boolean = false
+    val inquiryImage1: String? = "",
+    val inquiryImage2: String? = "",
+    val answerMessage: String? = "",
+    var isExpanded: Boolean = false
 ) : Parcelable

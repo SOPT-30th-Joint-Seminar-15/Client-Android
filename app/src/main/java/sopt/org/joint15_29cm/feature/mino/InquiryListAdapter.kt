@@ -1,7 +1,6 @@
 package sopt.org.joint15_29cm.feature.mino
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.DiffUtil
@@ -57,8 +56,8 @@ class InquiryListAdapter(
     }
 
     companion object {
-        object InquiryListDiffUtil
-            : DiffUtil.ItemCallback<InquiryData>() {
+        object InquiryListDiffUtil :
+            DiffUtil.ItemCallback<InquiryData>() {
             override fun areItemsTheSame(oldItem: InquiryData, newItem: InquiryData): Boolean {
                 return oldItem.id == newItem.id
             }

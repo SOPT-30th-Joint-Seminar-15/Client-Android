@@ -7,7 +7,6 @@ import coil.transform.CircleCropTransformation
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import sopt.org.joint15_29cm.R
 
 object BindingConversions {
 
