@@ -46,6 +46,7 @@
             tools:ignore="UnusedAttribute" />
 
         <Button
+            android:id="@+id/btn_read_write"
             style="@style/Widget.ConsultingButton.Style_Noto_12_Regular_White"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
