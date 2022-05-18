@@ -11,12 +11,14 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import sopt.org.joint15_29cm.R
 import sopt.org.joint15_29cm.databinding.ActivityReadBinding
+import sopt.org.joint15_29cm.util.CustomDialog
 import sopt.org.joint15_29cm.util.ExpandedAnimation
 
 class ReadActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityReadBinding
     private lateinit var inquiryAdapter: InquiryListAdapter
+    private lateinit var diglog: CustomDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,31 +32,24 @@ class ReadActivity : AppCompatActivity() {
         inquiryAdapter.submitList(
             listOf(
                 InquiryData(
-                    0,
-                    "2022-05-12",
-                    "문의하기",
-                    "안녕하세요",
-                    "https://avatars.githubusercontent.com/u/29870990?v=4",
-                    "https://avatars.githubusercontent.com/u/38402608?v=4",
-                    "반가워요"
+                    id = 0,
+                    date = "2022-05-12",
+                    type = "문의하기",
+                    inquiryMessage = "안녕하세요",
+                    answerMessage = "반가워요"
                 ),
                 InquiryData(
-                    1,
-                    "2022-05-13",
-                    "하기",
-                    "안녕하",
-                    "https://avatars.githubusercontent.com/u/38402608?v=4",
-                    "",
-                    "반가워요"
+                    id = 1,
+                    date = "2022-05-13",
+                    type = "문의하기",
+                    inquiryMessage = "안녕하세요",
+                    answerMessage = "반가워요"
                 ),
                 InquiryData(
-                    2,
-                    "2022-05-14",
-                    "문하기",
-                    "안녕",
-                    "https://avatars.githubusercontent.com/u/58364342?v=4",
-                    "",
-                    "반가워요"
+                    id = 2,
+                    date = "2022-05-14",
+                    type = "문의",
+                    inquiryMessage = "안녕"
                 )
             )
         )
@@ -68,7 +63,12 @@ class ReadActivity : AppCompatActivity() {
     }
 
     private fun showDialog() {
-        TODO("다이어로그 호출 로직 adapter에 넘김")
+        diglog = CustomDialog(this)
+        diglog.showReadDialog(R.layout.dialog_read)
+    }
+
+    fun removeItem() {
+        inquiryAdapter.removeItem()
     }
 
     private fun initExpandedAnimation(data: InquiryData, layoutExpand: LinearLayout) {

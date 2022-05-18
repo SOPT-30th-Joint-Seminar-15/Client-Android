@@ -6,6 +6,7 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import sopt.org.joint15_29cm.databinding.DialogCreateBinding
 import sopt.org.joint15_29cm.databinding.DialogReadBinding
+import sopt.org.joint15_29cm.feature.mino.ReadActivity
 
 class CustomDialog(private val context: AppCompatActivity) {
     private lateinit var binding: DialogCreateBinding
@@ -25,16 +26,21 @@ class CustomDialog(private val context: AppCompatActivity) {
         }
         dialog.show()
     }
+
     fun showReadDialog(@LayoutRes layout: Int) {
         bindingReadBinding = DialogReadBinding.inflate(context.layoutInflater)
-
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(bindingReadBinding.root)
         dialog.setCancelable(false)
 
         bindingReadBinding.tvReadBtnok.setOnClickListener {
+            (context as ReadActivity).removeItem()
             dialog.dismiss()
         }
+        bindingReadBinding.tvReadBtncancel.setOnClickListener {
+            dialog.dismiss()
+        }
+
         dialog.show()
     }
 }

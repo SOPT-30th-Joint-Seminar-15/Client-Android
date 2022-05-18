@@ -6,13 +6,9 @@ import android.view.animation.Animation
 import android.view.animation.Transformation
 
 class ExpandedAnimation {
-
     companion object {
-
         fun expand(view: View) {
-
-            view.visibility = View.VISIBLE
-            /*view.measure(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+            view.measure(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
             val actualHeight = view.measuredHeight
             view.layoutParams.height = 0
             val animation = object : Animation() {
@@ -25,7 +21,8 @@ class ExpandedAnimation {
             }
             animation.duration =
                 (actualHeight / view.context.resources.displayMetrics.density).toLong()
-            view.startAnimation(animation)*/
+            view.visibility = View.VISIBLE
+            view.startAnimation(animation)
         }
 
         fun collapse(view: View) {
