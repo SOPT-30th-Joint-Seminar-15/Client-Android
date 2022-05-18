@@ -1,9 +1,12 @@
 package sopt.org.joint15_29cm.feature.mino
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
@@ -11,6 +14,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import sopt.org.joint15_29cm.R
 import sopt.org.joint15_29cm.databinding.ActivityReadBinding
+import sopt.org.joint15_29cm.feature.zyoung.CreateActivity
 import sopt.org.joint15_29cm.util.CustomDialog
 import sopt.org.joint15_29cm.util.ExpandedAnimation
 
@@ -19,9 +23,15 @@ class ReadActivity : AppCompatActivity() {
     private lateinit var binding: ActivityReadBinding
     private lateinit var inquiryAdapter: InquiryListAdapter
     private lateinit var diglog: CustomDialog
+    private lateinit var getResultText: ActivityResultLauncher<Intent>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        getResultText = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+                if (it.resultCode == RESULT_OK) {
+
+                }
+            }
         initBindingView()
     }
 
@@ -53,6 +63,10 @@ class ReadActivity : AppCompatActivity() {
                 )
             )
         )
+        binding.btnNavCreate.setOnClickListener {
+            val intent = Intent(this, CreateActivity::class.java)
+            getResultText.launch(intent)
+        }
         binding.rvConsulting.addItemDecoration(
             DividerItemDecoration(
                 this,
