@@ -17,9 +17,9 @@ class CreateActivity : AppCompatActivity() {
     }
 
     private fun initDialog() {
-//        binding.test.setOnClickListener {
-//            val dialog = CustomDialog(this)
-//            dialog.show(R.layout.dialog_read)
-//        }
+        binding.btnCreateRegister.setOnClickListener {
+            val dialog = CustomDialog(this)
+            dialog.showCreateDialog(R.layout.dialog_create)
+        }
     }
 }
