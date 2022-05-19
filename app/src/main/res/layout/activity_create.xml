@@ -14,7 +14,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/include">
+        app:layout_constraintTop_toBottomOf="@id/include"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="-16dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -440,19 +442,22 @@
                     android:layout_width="0dp"
                     android:layout_height="43dp"
                     android:focusable="false"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/create_edittext_custom"
                     app:layout_constraintEnd_toStartOf="@id/button_create_ordernumber"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_ordernumber"
-                    tools:text="" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_ordernumber" />
 
                 <Button
                     android:id="@+id/button_create_ordernumber"
                     android:layout_width="71dp"
                     android:layout_height="43dp"
                     android:layout_marginStart="8dp"
+                    android:layout_marginTop="14dp"
                     android:paddingHorizontal="14dp"
                     android:paddingVertical="16dp"
                     android:text="@string/create_ordernumber"
+                    android:background="@drawable/create_edittext_custom"
                     android:textColor="@color/grey01_29cm"
                     android:textSize="11sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -533,11 +538,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:fontFamily="@font/notosanskr_regular"
-                    android:text="김주연"
                     android:textColor="@color/black02_29cm"
                     android:textSize="13sp"
                     app:layout_constraintStart_toEndOf="@id/tv_create_name"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="김주연" />
 
                 <TextView
                     android:id="@+id/tv_create_id"
@@ -558,11 +563,11 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/notosanskr_regular"
-                    android:text="tina1705@naver.com [YELLOW]"
                     android:textColor="@color/black02_29cm"
                     android:textSize="13sp"
                     app:layout_constraintStart_toEndOf="@id/tv_create_id"
-                    app:layout_constraintTop_toBottomOf="@id/tv_create_username" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_create_username"
+                    tools:text="tina1705@naver.com [YELLOW]" />
 
                 <TextView
                     android:id="@+id/tv_create_email"
@@ -583,11 +588,11 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/notosanskr_regular"
-                    android:text="tina1705@naver.com"
                     android:textColor="@color/black02_29cm"
                     android:textSize="13sp"
                     app:layout_constraintStart_toEndOf="@id/tv_create_id"
-                    app:layout_constraintTop_toBottomOf="@id/tv_create_userid" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_create_userid"
+                    tools:text="tina1705@naver.com" />
 
                 <Button
                     android:id="@+id/button_create_changeemail"
@@ -600,6 +605,7 @@
                     android:paddingTop="2dp"
                     android:paddingEnd="16dp"
                     android:paddingBottom="3dp"
+                    android:background=""
                     android:text="@string/create_changeemail"
                     app:layout_constraintStart_toEndOf="@id/tv_create_email"
                     app:layout_constraintTop_toBottomOf="@id/tv_create_useremail" />
@@ -608,112 +614,121 @@
 
             <EditText
                 android:id="@+id/et_create_asktitle"
-                app:layout_constraintTop_toBottomOf="@id/constraintlayout_create_userinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="18dp"
                 android:layout_marginTop="14dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:hint="@string/create_asktitlehint"
+                android:textSize="13sp"
+                android:background="@drawable/create_edittext_custom"
+                android:inputType="text"
+                app:layout_constraintTop_toBottomOf="@id/constraintlayout_create_userinfo" />
 
             <EditText
-                app:layout_constraintTop_toBottomOf="@id/et_create_asktitle"
                 android:id="@+id/et_create_askcontent"
                 android:layout_width="match_parent"
-                android:layout_marginTop="12dp"
+                android:layout_height="129dp"
+                android:gravity="top"
                 android:layout_marginHorizontal="18dp"
-                android:layout_height="129dp"/>
+                android:layout_marginTop="12dp"
+                android:hint="@string/create_askcontenthint"
+                android:inputType="text"
+                android:textSize="13sp"
+                android:background="@drawable/create_edittext_custom"
+                app:layout_constraintTop_toBottomOf="@id/et_create_asktitle" />
 
             <CheckBox
                 android:id="@+id/checkbox_create_checkemail"
                 android:layout_width="wrap_content"
                 android:layout_height="19dp"
-                app:layout_constraintDimensionRatio="1:1"
                 android:layout_marginStart="18dp"
-                android:drawablePadding="9dp"
                 android:layout_marginTop="16dp"
+                android:background="@android:color/transparent"
                 android:button="@null"
-                android:textColor="@color/black01_29cm"
-                android:textSize="11sp"
+                android:drawableStart="@drawable/ic_icn_selectbox_off"
+                android:drawablePadding="9dp"
                 android:fontFamily="@font/notosanskr_regular"
                 android:text="@string/create_getemail"
-                android:background="@android:color/transparent"
-                android:drawableStart="@drawable/ic_icn_selectbox_off"
+                android:textColor="@color/black01_29cm"
+                android:textSize="11sp"
+                app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_create_askcontent"/>
+                app:layout_constraintTop_toBottomOf="@id/et_create_askcontent" />
 
             <View
-                android:layout_marginTop="14dp"
+                android:id="@+id/view_create_divisor6"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:id="@+id/view_create_divisor6"
-                app:layout_constraintTop_toBottomOf="@id/checkbox_create_checkemail"
-                android:background="@color/line_grey_29cm"/>
+                android:layout_marginTop="14dp"
+                android:background="@color/line_grey_29cm"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_create_checkemail" />
 
             <ImageButton
-                app:layout_constraintTop_toBottomOf="@id/view_create_divisor6"
                 android:id="@+id/button_create_photo"
                 android:layout_width="74dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="18dp"
-                app:layout_constraintStart_toStartOf="parent"
-                android:background="@drawable/ic_btn_photo"
                 android:layout_height="0dp"
-                app:layout_constraintDimensionRatio="1:1"/>
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/ic_btn_photo"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_create_divisor6" />
 
             <TextView
-                app:layout_constraintTop_toBottomOf="@id/button_create_photo"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="20dp"
                 android:id="@+id/tv_create_caution1"
                 android:layout_width="wrap_content"
-                android:lineHeight="19dp"
                 android:layout_height="wrap_content"
-                android:textSize="11sp"
-                android:textColor="@color/grey02_29cm"
-                android:fontFamily="@font/notosanskr_regular"
                 android:layout_marginStart="19dp"
-                android:text="@string/create_caution1"/>
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/notosanskr_regular"
+                android:lineHeight="19dp"
+                android:text="@string/create_caution1"
+                android:textColor="@color/grey02_29cm"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_create_photo" />
 
             <TextView
-                app:layout_constraintTop_toBottomOf="@id/tv_create_caution1"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="5dp"
                 android:id="@+id/tv_create_caution2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="11sp"
-                android:lineHeight="19dp"
-                android:textColor="@color/grey02_29cm"
-                android:fontFamily="@font/notosanskr_regular"
                 android:layout_marginStart="19dp"
-                android:text="@string/create_caution2"/>
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/notosanskr_regular"
+                android:lineHeight="19dp"
+                android:text="@string/create_caution2"
+                android:textColor="@color/grey02_29cm"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_create_caution1" />
 
             <TextView
-                app:layout_constraintTop_toBottomOf="@id/tv_create_caution2"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="5dp"
                 android:id="@+id/tv_create_caution3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="11sp"
-                android:lineHeight="19dp"
-                android:textColor="@color/grey02_29cm"
-                android:fontFamily="@font/notosanskr_regular"
                 android:layout_marginStart="19dp"
-                android:text="@string/create_caution3"/>
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/notosanskr_regular"
+                android:lineHeight="19dp"
+                android:text="@string/create_caution3"
+                android:textColor="@color/grey02_29cm"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_create_caution2" />
 
             <TextView
-                app:layout_constraintTop_toBottomOf="@id/tv_create_caution3"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="5dp"
                 android:id="@+id/tv_create_caution4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="11sp"
-                android:lineHeight="19dp"
-                android:textColor="@color/grey02_29cm"
-                android:fontFamily="@font/notosanskr_regular"
                 android:layout_marginStart="19dp"
-                android:text="@string/create_caution4"/>
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/notosanskr_regular"
+                android:lineHeight="19dp"
+                android:text="@string/create_caution4"
+                android:textColor="@color/grey02_29cm"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_create_caution3" />
 
             <Button
                 android:id="@+id/btn_create_register"
@@ -721,12 +736,12 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="19dp"
                 android:background="@color/black02_29cm"
-                android:textColor="@color/white_29cm"
-                android:text="@string/create_registerbutton"
-                android:textSize="15sp"
                 android:fontFamily="@font/notosanskr_medium"
+                android:text="@string/create_registerbutton"
+                android:textColor="@color/white_29cm"
+                android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_create_caution4"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_create_caution4" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
