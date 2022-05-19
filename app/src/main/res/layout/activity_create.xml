@@ -14,7 +14,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/include">
+        app:layout_constraintTop_toBottomOf="@id/include"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="-16dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -76,138 +78,168 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="19dp"
                 android:layout_marginTop="14dp"
-                android:layout_marginEnd="63dp"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 app:layout_constraintTop_toBottomOf="@id/tv_create_purchaseinfo">
 
-                <RadioButton
-                    android:id="@+id/radiobutton_create_delivery"
-                    android:layout_width="wrap_content"
-                    android:layout_height="19dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    android:button="@null"
-                    android:drawableStart="@drawable/create_button_background"
-                    android:drawablePadding="6dp"
-                    android:fontFamily="@font/notosanskr_regular"
-                    android:text="@string/create_purchasedelivery"
-                    android:textSize="11sp" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <RadioButton
-                    android:id="@+id/radiobutton_create_order"
-                    android:layout_width="wrap_content"
-                    android:layout_height="19dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    android:button="@null"
-                    android:drawableStart="@drawable/create_button_background"
-                    android:drawablePadding="6dp"
-                    android:fontFamily="@font/notosanskr_regular"
-                    android:text="@string/create_purchaseorder"
-                    android:textSize="11sp" />
+                    <RadioButton
+                        android:id="@+id/radiobutton_create_delivery"
+                        android:layout_width="0dp"
+                        android:layout_height="19dp"
+                        android:background="@android:color/transparent"
+                        android:button="@null"
+                        android:drawableStart="@drawable/create_radiobutton_background"
+                        android:drawablePadding="6dp"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:text="@string/create_purchasedelivery"
+                        android:textSize="11sp"
+                        app:layout_constraintEnd_toStartOf="@id/radiobutton_create_order"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <RadioButton
-                    android:id="@+id/radiobutton_create_cancel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="19dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    android:button="@null"
-                    android:drawableStart="@drawable/create_button_background"
-                    android:drawablePadding="6dp"
-                    android:fontFamily="@font/notosanskr_regular"
-                    android:text="@string/create_purchasecancel"
+                    <RadioButton
+                        android:id="@+id/radiobutton_create_order"
+                        android:layout_width="0dp"
+                        android:layout_height="19dp"
+                        android:background="@android:color/transparent"
+                        android:button="@null"
+                        android:drawableStart="@drawable/create_radiobutton_background"
+                        android:drawablePadding="6dp"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:text="@string/create_purchaseorder"
+                        android:textSize="11sp"
+                        app:layout_constraintEnd_toStartOf="@id/radiobutton_create_cancel"
+                        app:layout_constraintStart_toEndOf="@id/radiobutton_create_delivery"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                    android:textSize="11sp" />
-            </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/radiobutton_create_cancel"
+                        android:layout_width="0dp"
+                        android:layout_height="19dp"
+                        android:background="@android:color/transparent"
+                        android:button="@null"
+                        android:drawableStart="@drawable/create_radiobutton_background"
+                        android:drawablePadding="6dp"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:text="@string/create_purchasecancel"
+                        android:textSize="11sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/radiobutton_create_order"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <RadioGroup
-                android:id="@+id/radiogroup2_create_purchase"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="19dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="63dp"
-                android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@id/radiogroup1_create_purchase">
 
-                <RadioButton
-                    android:id="@+id/radiobutton_create_return"
-                    android:layout_width="wrap_content"
-                    android:layout_height="19dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    android:button="@null"
-                    android:drawableStart="@drawable/create_button_background"
-                    android:drawablePadding="6dp"
-                    android:fontFamily="@font/notosanskr_regular"
-                    android:text="@string/create_purchasereturn"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintlayout_create_radio2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp">
 
-                    android:textSize="11sp" />
+                    <RadioButton
+                        android:id="@+id/radiobutton_create_return"
+                        android:layout_width="0dp"
+                        android:layout_height="19dp"
+                        android:background="@android:color/transparent"
+                        android:button="@null"
+                        android:drawableStart="@drawable/create_radiobutton_background"
+                        android:drawablePadding="6dp"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:text="@string/create_purchasereturn"
+                        android:textSize="11sp"
+                        app:layout_constraintEnd_toStartOf="@+id/radiobutton_create_exchange"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <RadioButton
-                    android:id="@+id/radiobutton_create_exchange"
-                    android:layout_width="wrap_content"
-                    android:layout_height="19dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    android:button="@null"
-                    android:drawableStart="@drawable/create_button_background"
-                    android:drawablePadding="6dp"
-                    android:fontFamily="@font/notosanskr_regular"
-                    android:text="@string/create_purchaseexchange"
-                    android:textSize="11sp" />
+                    <RadioButton
+                        android:id="@+id/radiobutton_create_exchange"
+                        android:layout_width="0dp"
+                        android:layout_height="22dp"
+                        android:background="@android:color/transparent"
+                        android:button="@null"
+                        android:drawableStart="@drawable/create_radiobutton_background"
+                        android:drawablePadding="6dp"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:text="@string/create_purchaseexchange"
+                        android:textSize="11sp"
+                        app:layout_constraintEnd_toStartOf="@+id/radiobutton_create_refund"
+                        app:layout_constraintStart_toEndOf="@+id/radiobutton_create_return"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <RadioButton
-                    android:id="@+id/radiobutton_create_refund"
-                    android:layout_width="wrap_content"
-                    android:layout_height="19dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    android:button="@null"
-                    android:drawableStart="@drawable/create_button_background"
-                    android:drawablePadding="6dp"
-                    android:fontFamily="@font/notosanskr_regular"
-                    android:text="@string/create_purchaserefund"
-                    android:textSize="11sp" />
-            </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/radiobutton_create_refund"
+                        android:layout_width="0dp"
+                        android:layout_height="19dp"
+                        android:background="@android:color/transparent"
+                        android:button="@null"
+                        android:drawableStart="@drawable/create_radiobutton_background"
+                        android:drawablePadding="6dp"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:text="@string/create_purchaserefund"
+                        android:textSize="11sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/radiobutton_create_exchange"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <RadioGroup
-                android:id="@+id/radiogroup3_create_purchase"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="19dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="63dp"
-                android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@id/radiogroup2_create_purchase">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="18dp">
 
-                <RadioButton
-                    android:id="@+id/radiobutton_create_gift"
-                    android:layout_width="wrap_content"
-                    android:layout_height="19dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    android:button="@null"
-                    android:drawableStart="@drawable/create_button_background"
-                    android:drawablePadding="6dp"
-                    android:fontFamily="@font/notosanskr_regular"
-                    android:text="@string/create_purchasegift"
-                    android:textSize="11sp" />
+                    <RadioButton
+                        android:id="@+id/radiobutton_create_gift"
+                        android:layout_width="0dp"
+                        android:layout_height="19dp"
+                        android:background="@android:color/transparent"
+                        android:button="@null"
+                        android:drawableStart="@drawable/create_radiobutton_background"
+                        android:drawablePadding="6dp"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:text="@string/create_purchasegift"
+                        android:textSize="11sp"
+                        app:layout_constraintEnd_toStartOf="@+id/radiobutton_create_deposit"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <RadioButton
-                    android:id="@+id/radiobutton_create_deposit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="19dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    android:button="@null"
-                    android:drawableStart="@drawable/create_button_background"
-                    android:drawablePadding="6dp"
-                    android:fontFamily="@font/notosanskr_regular"
-                    android:text="@string/create_purchasedeposit"
-                    android:textSize="11sp" />
+                    <RadioButton
+                        android:id="@+id/radiobutton_create_deposit"
+                        android:layout_width="0dp"
+                        android:layout_height="19dp"
+                        android:background="@android:color/transparent"
+                        android:button="@null"
+                        android:drawableStart="@drawable/create_radiobutton_background"
+                        android:drawablePadding="6dp"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:text="@string/create_purchasedeposit"
+                        android:textSize="11sp"
+                        app:layout_constraintEnd_toStartOf="@+id/view_create_unseen"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/radiobutton_create_gift"
+                        app:layout_constraintTop_toTopOf="parent" />
 
+                    <View
+                        android:id="@+id/view_create_unseen"
+                        android:layout_width="0dp"
+                        android:layout_height="19dp"
+                        android:background="@android:color/transparent"
+                        android:button="@null"
+                        android:drawableStart="@drawable/create_radiobutton_background"
+                        android:drawablePadding="6dp"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:text="@string/create_purchasedeposit"
+                        android:textSize="11sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/radiobutton_create_deposit"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </RadioGroup>
 
             <View
@@ -216,7 +248,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="31dp"
                 android:background="@color/line_grey_29cm"
-                app:layout_constraintTop_toBottomOf="@id/radiogroup3_create_purchase" />
+                app:layout_constraintTop_toBottomOf="@id/radiogroup1_create_purchase" />
 
             <TextView
                 android:id="@+id/tv_create_default"
@@ -232,105 +264,112 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/view_create_divisor2" />
 
-            <RadioGroup
-                android:id="@+id/radiogroup1_create_default"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintlayout_create_defaultradio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="19dp"
                 android:layout_marginTop="13dp"
-                android:layout_marginEnd="43dp"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@id/tv_create_default">
 
                 <RadioButton
                     android:id="@+id/radiobutton_create_userinfo"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="19dp"
-                    android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:button="@null"
-                    android:drawableStart="@drawable/create_button_background"
+                    android:drawableStart="@drawable/create_radiobutton_background"
                     android:drawablePadding="6dp"
                     android:fontFamily="@font/notosanskr_regular"
                     android:text="@string/create_defaultuserinfo"
-                    android:textSize="11sp" />
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toStartOf="@+id/radiobutton_create_userrule"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <RadioButton
                     android:id="@+id/radiobutton_create_userrule"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="19dp"
-                    android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:button="@null"
-                    android:drawableStart="@drawable/create_button_background"
+                    android:drawableStart="@drawable/create_radiobutton_background"
                     android:drawablePadding="6dp"
                     android:fontFamily="@font/notosanskr_regular"
                     android:text="@string/create_defaultuserrule"
-                    android:textSize="11sp" />
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toStartOf="@+id/radiobutton_create_purchaseinfo"
+                    app:layout_constraintStart_toEndOf="@+id/radiobutton_create_userinfo"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <RadioButton
                     android:id="@+id/radiobutton_create_purchaseinfo"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="19dp"
-                    android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:button="@null"
-                    android:drawableStart="@drawable/create_button_background"
+                    android:drawableStart="@drawable/create_radiobutton_background"
                     android:drawablePadding="6dp"
                     android:fontFamily="@font/notosanskr_regular"
                     android:text="@string/create_defaultpurchaseinfo"
-                    android:textSize="11sp" />
-            </RadioGroup>
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/radiobutton_create_userrule"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <RadioGroup
-                android:id="@+id/radiogroup2_create_default"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="19dp"
-                android:layout_marginTop="13dp"
-
-                android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@id/radiogroup1_create_default">
 
                 <RadioButton
                     android:id="@+id/radiobutton_create_item"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="19dp"
-                    android:layout_weight="1"
+                    android:layout_marginTop="18dp"
                     android:background="@android:color/transparent"
                     android:button="@null"
-                    android:drawableStart="@drawable/create_button_background"
+                    android:drawableStart="@drawable/create_radiobutton_background"
                     android:drawablePadding="6dp"
                     android:fontFamily="@font/notosanskr_regular"
                     android:text="@string/create_defaultitem"
-                    android:textSize="11sp" />
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toStartOf="@id/radiobutton_create_chosen"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/radiobutton_create_userinfo" />
 
                 <RadioButton
                     android:id="@+id/radiobutton_create_chosen"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="19dp"
-                    android:layout_weight="1"
+                    android:layout_marginTop="18dp"
                     android:background="@android:color/transparent"
                     android:button="@null"
-                    android:drawableStart="@drawable/create_button_background"
+                    android:drawableStart="@drawable/create_radiobutton_background"
                     android:drawablePadding="6dp"
                     android:fontFamily="@font/notosanskr_regular"
                     android:text="@string/create_defaultchosen"
-                    android:textSize="11sp" />
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toEndOf="@id/radiobutton_create_coupon"
+                    app:layout_constraintStart_toEndOf="@id/radiobutton_create_item"
+                    app:layout_constraintTop_toBottomOf="@id/radiobutton_create_userrule" />
 
                 <RadioButton
                     android:id="@+id/radiobutton_create_coupon"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="19dp"
-                    android:layout_weight="1"
+                    android:layout_marginTop="18dp"
                     android:background="@android:color/transparent"
                     android:button="@null"
-                    android:drawableStart="@drawable/create_button_background"
+                    android:drawableStart="@drawable/create_radiobutton_background"
                     android:drawablePadding="6dp"
                     android:fontFamily="@font/notosanskr_regular"
                     android:text="@string/create_defaultcoupon"
-                    android:textSize="11sp" />
-            </RadioGroup>
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/radiobutton_create_chosen"
+                    app:layout_constraintTop_toBottomOf="@id/radiobutton_create_purchaseinfo" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:id="@+id/view_create_divisor3"
@@ -338,7 +377,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="33dp"
                 android:background="@color/line_grey_29cm"
-                app:layout_constraintTop_toBottomOf="@id/radiogroup2_create_default" />
+                app:layout_constraintTop_toBottomOf="@id/constraintlayout_create_defaultradio" />
 
             <TextView
                 android:id="@+id/tv_create_etc"
@@ -354,55 +393,60 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/view_create_divisor3" />
 
-            <RadioGroup
-                android:id="@+id/radiogroup_create_etc"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintlayout_create_etcradio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="19dp"
                 android:layout_marginTop="13dp"
-                android:layout_marginEnd="43dp"
-                android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@id/tv_create_etc">
 
                 <RadioButton
                     android:id="@+id/radiobutton_create_system"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="19dp"
-                    android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:button="@null"
-                    android:drawableStart="@drawable/create_button_background"
+                    android:drawableStart="@drawable/create_radiobutton_background"
                     android:drawablePadding="6dp"
                     android:fontFamily="@font/notosanskr_regular"
                     android:text="@string/create_etcsystem"
-                    android:textSize="11sp" />
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toStartOf="@id/radiobutton_create_etc"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <RadioButton
                     android:id="@+id/radiobutton_create_etc"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="19dp"
-                    android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:button="@null"
-                    android:drawableStart="@drawable/create_button_background"
+                    android:drawableStart="@drawable/create_radiobutton_background"
                     android:drawablePadding="6dp"
                     android:fontFamily="@font/notosanskr_regular"
                     android:text="@string/create_etcetc"
-                    android:textSize="11sp" />
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toStartOf="@id/radiobutton_create_document"
+                    app:layout_constraintStart_toEndOf="@id/radiobutton_create_system"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <RadioButton
                     android:id="@+id/radiobutton_create_document"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="19dp"
-                    android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:button="@null"
-                    android:drawableStart="@drawable/create_button_background"
+                    android:drawableStart="@drawable/create_radiobutton_background"
                     android:drawablePadding="6dp"
                     android:fontFamily="@font/notosanskr_regular"
                     android:text="@string/create_etcdocument"
-                    android:textSize="11sp" />
-            </RadioGroup>
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/radiobutton_create_etc"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:id="@+id/view_create_divisor4"
@@ -410,7 +454,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="29dp"
                 android:background="@color/line_grey_29cm"
-                app:layout_constraintTop_toBottomOf="@id/radiogroup_create_etc" />
+                app:layout_constraintTop_toBottomOf="@id/constraintlayout_create_etcradio" />
 
             <!--            visibility gone으로 설정해주기 -->
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -439,19 +483,23 @@
                     android:id="@+id/et_create_ordernumber"
                     android:layout_width="0dp"
                     android:layout_height="43dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/create_edittext_custom"
+                    android:clickable="false"
+                    android:cursorVisible="false"
                     android:focusable="false"
+                    android:focusableInTouchMode="false"
                     app:layout_constraintEnd_toStartOf="@id/button_create_ordernumber"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_ordernumber"
-                    tools:text="" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_ordernumber" />
 
                 <Button
                     android:id="@+id/button_create_ordernumber"
                     android:layout_width="71dp"
                     android:layout_height="43dp"
                     android:layout_marginStart="8dp"
-                    android:paddingHorizontal="14dp"
-                    android:paddingVertical="16dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/create_button_custom"
                     android:text="@string/create_ordernumber"
                     android:textColor="@color/grey01_29cm"
                     android:textSize="11sp"
@@ -533,11 +581,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:fontFamily="@font/notosanskr_regular"
-                    android:text="김주연"
                     android:textColor="@color/black02_29cm"
                     android:textSize="13sp"
                     app:layout_constraintStart_toEndOf="@id/tv_create_name"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="김주연" />
 
                 <TextView
                     android:id="@+id/tv_create_id"
@@ -558,11 +606,11 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/notosanskr_regular"
-                    android:text="tina1705@naver.com [YELLOW]"
                     android:textColor="@color/black02_29cm"
                     android:textSize="13sp"
                     app:layout_constraintStart_toEndOf="@id/tv_create_id"
-                    app:layout_constraintTop_toBottomOf="@id/tv_create_username" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_create_username"
+                    tools:text="tina1705@naver.com [YELLOW]" />
 
                 <TextView
                     android:id="@+id/tv_create_email"
@@ -583,24 +631,23 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/notosanskr_regular"
-                    android:text="tina1705@naver.com"
                     android:textColor="@color/black02_29cm"
                     android:textSize="13sp"
                     app:layout_constraintStart_toEndOf="@id/tv_create_id"
-                    app:layout_constraintTop_toBottomOf="@id/tv_create_userid" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_create_userid"
+                    tools:text="tina1705@naver.com" />
 
                 <Button
                     android:id="@+id/button_create_changeemail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="106dp"
+                    android:layout_height="31dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="10dp"
+                    android:background="@drawable/create_button2_custom"
                     android:fontFamily="@font/notosanskr_medium"
-                    android:paddingStart="18dp"
-                    android:paddingTop="2dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="3dp"
                     android:text="@string/create_changeemail"
+                    android:textColor="@color/black02_29cm"
+                    android:textSize="11sp"
                     app:layout_constraintStart_toEndOf="@id/tv_create_email"
                     app:layout_constraintTop_toBottomOf="@id/tv_create_useremail" />
 
@@ -608,112 +655,148 @@
 
             <EditText
                 android:id="@+id/et_create_asktitle"
-                app:layout_constraintTop_toBottomOf="@id/constraintlayout_create_userinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="18dp"
                 android:layout_marginTop="14dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:background="@drawable/create_edittext_custom"
+                android:hint="@string/create_asktitlehint"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="13sp"
+                app:layout_constraintTop_toBottomOf="@id/constraintlayout_create_userinfo" />
 
             <EditText
-                app:layout_constraintTop_toBottomOf="@id/et_create_asktitle"
                 android:id="@+id/et_create_askcontent"
                 android:layout_width="match_parent"
-                android:layout_marginTop="12dp"
+                android:layout_height="129dp"
                 android:layout_marginHorizontal="18dp"
-                android:layout_height="129dp"/>
+                android:layout_marginTop="12dp"
+                android:background="@drawable/create_edittext_custom"
+                android:gravity="top"
+                android:hint="@string/create_askcontenthint"
+                android:inputType="text"
+                android:textSize="13sp"
+                app:layout_constraintTop_toBottomOf="@id/et_create_asktitle" />
 
             <CheckBox
                 android:id="@+id/checkbox_create_checkemail"
                 android:layout_width="wrap_content"
                 android:layout_height="19dp"
-                app:layout_constraintDimensionRatio="1:1"
                 android:layout_marginStart="18dp"
-                android:drawablePadding="9dp"
                 android:layout_marginTop="16dp"
+                android:background="@android:color/transparent"
                 android:button="@null"
-                android:textColor="@color/black01_29cm"
-                android:textSize="11sp"
+                android:drawableStart="@drawable/ic_icn_selectbox_off"
+                android:drawablePadding="9dp"
                 android:fontFamily="@font/notosanskr_regular"
                 android:text="@string/create_getemail"
-                android:background="@android:color/transparent"
-                android:drawableStart="@drawable/ic_icn_selectbox_off"
+                android:textColor="@color/black01_29cm"
+                android:textSize="11sp"
+                app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/et_create_askcontent"/>
+                app:layout_constraintTop_toBottomOf="@id/et_create_askcontent" />
 
             <View
-                android:layout_marginTop="14dp"
+                android:id="@+id/view_create_divisor6"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:id="@+id/view_create_divisor6"
-                app:layout_constraintTop_toBottomOf="@id/checkbox_create_checkemail"
-                android:background="@color/line_grey_29cm"/>
+                android:layout_marginTop="14dp"
+                android:background="@color/line_grey_29cm"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_create_checkemail" />
 
             <ImageButton
-                app:layout_constraintTop_toBottomOf="@id/view_create_divisor6"
                 android:id="@+id/button_create_photo"
                 android:layout_width="74dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="18dp"
-                app:layout_constraintStart_toStartOf="parent"
-                android:background="@drawable/ic_btn_photo"
                 android:layout_height="0dp"
-                app:layout_constraintDimensionRatio="1:1"/>
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/ic_btn_photo"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_create_divisor6" />
 
             <TextView
-                app:layout_constraintTop_toBottomOf="@id/button_create_photo"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="20dp"
                 android:id="@+id/tv_create_caution1"
                 android:layout_width="wrap_content"
-                android:lineHeight="19dp"
                 android:layout_height="wrap_content"
-                android:textSize="11sp"
-                android:textColor="@color/grey02_29cm"
-                android:fontFamily="@font/notosanskr_regular"
                 android:layout_marginStart="19dp"
-                android:text="@string/create_caution1"/>
+                android:layout_marginTop="20dp"
+                android:drawablePadding="7dp"
+                android:fontFamily="@font/notosanskr_regular"
+                android:lineHeight="19dp"
+                android:text="@string/create_caution1"
+                android:textColor="@color/grey02_29cm"
+                android:textSize="11sp"
+                app:drawableStartCompat="@drawable/create_ellipse_custom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_create_photo" />
 
             <TextView
-                app:layout_constraintTop_toBottomOf="@id/tv_create_caution1"
-                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/tv_create_caution2_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
                 android:layout_marginTop="5dp"
+                app:drawableStartCompat="@drawable/create_ellipsered_custom"
+                app:layout_constraintEnd_toStartOf="@id/tv_create_caution2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_create_caution1" />
+
+            <TextView
                 android:id="@+id/tv_create_caution2"
-                android:layout_width="wrap_content"
+                android:layout_width="221dp"
                 android:layout_height="wrap_content"
-                android:textSize="11sp"
-                android:lineHeight="19dp"
-                android:textColor="@color/grey02_29cm"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="5dp"
                 android:fontFamily="@font/notosanskr_regular"
-                android:layout_marginStart="19dp"
-                android:text="@string/create_caution2"/>
+                android:lineHeight="19dp"
+                android:text="@string/create_caution2"
+                android:textColor="@color/red_29cm"
+                android:textSize="11sp"
+                app:layout_constraintStart_toEndOf="@id/tv_create_caution2_custom"
+                app:layout_constraintTop_toBottomOf="@id/tv_create_caution1" />
 
             <TextView
-                app:layout_constraintTop_toBottomOf="@id/tv_create_caution2"
-                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/tv_create_caution3_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
                 android:layout_marginTop="5dp"
+                app:drawableStartCompat="@drawable/create_ellipse_custom"
+                app:layout_constraintEnd_toStartOf="@id/tv_create_caution3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_create_caution2" />
+
+            <TextView
                 android:id="@+id/tv_create_caution3"
-                android:layout_width="wrap_content"
+                android:layout_width="237dp"
                 android:layout_height="wrap_content"
-                android:textSize="11sp"
-                android:lineHeight="19dp"
-                android:textColor="@color/grey02_29cm"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="5dp"
                 android:fontFamily="@font/notosanskr_regular"
-                android:layout_marginStart="19dp"
-                android:text="@string/create_caution3"/>
+                android:lineHeight="19dp"
+                android:text="@string/create_caution3"
+                android:textColor="@color/grey02_29cm"
+                android:textSize="11sp"
+                app:layout_constraintStart_toEndOf="@id/tv_create_caution3_custom"
+                app:layout_constraintTop_toBottomOf="@id/tv_create_caution2" />
 
             <TextView
-                app:layout_constraintTop_toBottomOf="@id/tv_create_caution3"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="5dp"
                 android:id="@+id/tv_create_caution4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="11sp"
-                android:lineHeight="19dp"
-                android:textColor="@color/grey02_29cm"
-                android:fontFamily="@font/notosanskr_regular"
                 android:layout_marginStart="19dp"
-                android:text="@string/create_caution4"/>
+                android:layout_marginTop="5dp"
+                android:drawablePadding="7dp"
+                android:fontFamily="@font/notosanskr_regular"
+                android:lineHeight="19dp"
+                android:text="@string/create_caution4"
+                android:textColor="@color/grey02_29cm"
+                android:textSize="11sp"
+                app:drawableStartCompat="@drawable/create_ellipse_custom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_create_caution3" />
 
             <Button
                 android:id="@+id/btn_create_register"
@@ -721,12 +804,12 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="19dp"
                 android:background="@color/black02_29cm"
-                android:textColor="@color/white_29cm"
-                android:text="@string/create_registerbutton"
-                android:textSize="15sp"
                 android:fontFamily="@font/notosanskr_medium"
+                android:text="@string/create_registerbutton"
+                android:textColor="@color/white_29cm"
+                android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_create_caution4"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_create_caution4" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
