@@ -7,7 +7,6 @@ import kotlinx.parcelize.Parcelize
 data class RequiryData(
     val id: Int,
     val date: String,
-    val type: String,
-    val inquiryMessage: String,
-    val answerMessage: String? = ""
+    val type: String?,
+    val requiryMessage: String,
 ) : Parcelable

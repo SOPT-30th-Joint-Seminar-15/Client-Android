@@ -1,14 +1,20 @@
 package sopt.org.joint15_29cm.feature.zyoung
 
+import android.content.ContentValues.TAG
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import sopt.org.joint15_29cm.R
 import sopt.org.joint15_29cm.databinding.ActivityCreateBinding
+import sopt.org.joint15_29cm.feature.mino.ReadActivity
 import sopt.org.joint15_29cm.util.CustomDialog
+import java.time.LocalDate
 
 class CreateActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCreateBinding
+    private var checkedTitle : String ?= null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCreateBinding.inflate(layoutInflater)
@@ -21,11 +27,11 @@ class CreateActivity : AppCompatActivity() {
     private fun initDialog() {
         binding.btnCreateRegister.setOnClickListener {
 
-            if(binding.etCreateAsktitle.text.isNotEmpty() && binding.etCreateAskcontent.text.isNotEmpty()){
+            if(binding.etCreateAsktitle.text.isNotEmpty() && binding.etCreateAskcontent.text.isNotEmpty() && checkedTitle!=null){
 
                 val dialog = CustomDialog(this)
                 dialog.showCreateDialog(R.layout.dialog_create)
-
+                setIntent()
             }
 
 
@@ -54,7 +60,7 @@ class CreateActivity : AppCompatActivity() {
         )
 
 
-        for (i in 0 until radioButtonList.size)
+        for (i in radioButtonList.indices)
             radioButtonList[i].setOnCheckedChangeListener { _, isChecked ->
                 if (radioButtonList[i].isChecked) {
                     if (i in 0..7)
@@ -70,12 +76,19 @@ class CreateActivity : AppCompatActivity() {
                         radioButtonList[x].isChecked = false
 
                     }
+                    checkedTitle=radioButtonList[i].text.toString()
                 }
 
             }
     }
 
-    private fun setIntent(){
+    private fun getCurrentDate() : String = LocalDate.now().toString()
 
+    private fun setIntent(){
+        val intent= Intent(this, ReadActivity::class.java)
+
+        val data=RequiryData(0, getCurrentDate(), checkedTitle!!, binding.etCreateAskcontent.text.toString())
+        intent.putExtra("data",data)
+        setResult(RESULT_OK, intent)
     }
 }
