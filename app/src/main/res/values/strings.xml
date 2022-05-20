@@ -63,6 +63,9 @@
     <string name="read_delete">문의글을 삭제 하시겠습니까?</string>
     <string name="read_ok">확인</string>
     <string name="read_cancel">취소</string>
+    <string name="create_optionmsg">문의유형을 선택해주세요.</string>
+    <string name="create_titlemsg">제목을 입력해주세요.</string>
+    <string name="create_contentmsg">내용을 입력해주세요.</string>
 
 
 </resources>

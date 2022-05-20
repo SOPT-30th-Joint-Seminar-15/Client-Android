@@ -26,15 +26,26 @@ class CreateActivity : AppCompatActivity() {
 
     private fun initDialog() {
         binding.btnCreateRegister.setOnClickListener {
+            if(checkedTitle==null){
+                val dialog = CustomDialog(this)
+                dialog.showCreateAskDialog(R.layout.dialog_createask, getString(R.string.create_optionmsg))
+                return@setOnClickListener
+            } //옵션을 선택하지 않은 경우
+            if(binding.etCreateAsktitle.text.isEmpty()){
+                val dialog = CustomDialog(this)
+                dialog.showCreateAskDialog(R.layout.dialog_createask, getString(R.string.create_titlemsg))
+                return@setOnClickListener
+            } //제목을 입력하지 않은 경우
+            if(binding.etCreateAskcontent.text.isEmpty()){
+                val dialog = CustomDialog(this)
+                dialog.showCreateAskDialog(R.layout.dialog_createask, getString(R.string.create_contentmsg))
+                return@setOnClickListener
+            } //내용을 입력하지 않은 경우
 
-            if(binding.etCreateAsktitle.text.isNotEmpty() && binding.etCreateAskcontent.text.isNotEmpty() && checkedTitle!=null){
 
                 val dialog = CustomDialog(this)
                 dialog.showCreateDialog(R.layout.dialog_create)
                 setIntent()
-            }
-
-
         }
     }
 
@@ -87,7 +98,7 @@ class CreateActivity : AppCompatActivity() {
     private fun setIntent(){
         val intent= Intent(this, ReadActivity::class.java)
 
-        val data=RequiryData(0, getCurrentDate(), checkedTitle!!, binding.etCreateAskcontent.text.toString())
+        val data=RequiryData(0, getCurrentDate(), checkedTitle!!, binding.etCreateAskcontent.text.toString(), binding.checkboxCreateCheckemail.isChecked)
         intent.putExtra("data",data)
         setResult(RESULT_OK, intent)
     }

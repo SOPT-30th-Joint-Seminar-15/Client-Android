@@ -9,4 +9,5 @@ data class RequiryData(
     val date: String,
     val type: String?,
     val requiryMessage: String,
+    val getEmailResponse: Boolean
 ) : Parcelable
