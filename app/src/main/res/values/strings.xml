@@ -54,7 +54,9 @@
     <string name="create_caution3">가로사이즈가 450pixel을 초과하는 경우 자동으로 450픽셀로 조정됩니다.</string>
     <string name="create_caution4">첨부파일은 최대 2개까지 등록가능합니다.</string>
     <string name="create_registerbutton">등록하기</string>
-
+    <string name="create_username">김주연</string>
+    <string name="create_userid">"tina1705@naver.com"</string>
+    <string name="create_useremail">"tina1705@naver.com"</string>
     <!--다이얼로그 뷰-->
     <string name="create_register">등록되었습니다.</string>
     <string name="create_ok">확인</string>

@@ -463,104 +463,106 @@
                 android:layout_height="wrap_content"
                 android:visibility="gone"
                 app:layout_constraintTop_toBottomOf="@+id/view_create_divisor4">
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintlayout_create_orderinfo2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toTopOf="parent"
                     android:layout_marginStart="19dp"
                     android:layout_marginTop="14dp"
                     android:layout_marginEnd="25dp"
-                    >
-                <TextView
-                    android:id="@+id/tv_ordernumber"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/notosanskr_medium"
-                    android:lineHeight="27dp"
-                    android:text="@string/create_ordernumber"
-                    android:textColor="@color/black02_29cm"
-                    android:textSize="13sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <EditText
-                    android:id="@+id/et_create_ordernumber"
-                    android:layout_width="0dp"
-                    android:layout_height="43dp"
-                    android:layout_marginTop="14dp"
-                    android:background="@drawable/create_edittext_custom"
-                    android:clickable="false"
-                    android:cursorVisible="false"
-                    android:focusable="false"
-                    android:focusableInTouchMode="false"
-                    app:layout_constraintEnd_toStartOf="@id/button_create_ordernumber"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_ordernumber" />
+                    <TextView
+                        android:id="@+id/tv_ordernumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanskr_medium"
+                        android:lineHeight="27dp"
+                        android:text="@string/create_ordernumber"
+                        android:textColor="@color/black02_29cm"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <Button
-                    android:id="@+id/button_create_ordernumber"
-                    android:layout_width="71dp"
-                    android:layout_height="43dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="14dp"
-                    android:background="@drawable/create_button_custom"
-                    android:text="@string/create_ordernumber"
-                    android:textColor="@color/grey01_29cm"
-                    android:textSize="11sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/et_create_ordernumber"
-                    app:layout_constraintTop_toBottomOf="@id/tv_ordernumber" />
+                    <EditText
+                        android:id="@+id/et_create_ordernumber"
+                        android:layout_width="0dp"
+                        android:layout_height="43dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/create_edittext_custom"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        app:layout_constraintEnd_toStartOf="@id/button_create_ordernumber"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_ordernumber" />
 
-                <TextView
-                    android:id="@+id/tv_create_itemname"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:fontFamily="@font/notosanskr_medium"
-                    android:lineHeight="27dp"
-                    android:text="@string/create_itemname"
-                    android:textColor="@color/black02_29cm"
-                    android:textSize="13sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/et_create_ordernumber" />
+                    <Button
+                        android:id="@+id/button_create_ordernumber"
+                        android:layout_width="71dp"
+                        android:layout_height="43dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/create_button_custom"
+                        android:text="@string/create_ordernumber"
+                        android:textColor="@color/grey01_29cm"
+                        android:textSize="11sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/et_create_ordernumber"
+                        app:layout_constraintTop_toBottomOf="@id/tv_ordernumber" />
 
-                <TextView
-                    android:id="@+id/tv_create_orderdate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
-                    android:fontFamily="@font/notosanskr_medium"
-                    android:lineHeight="27dp"
-                    android:text="@string/create_orderdate"
-                    android:textColor="@color/black02_29cm"
-                    android:textSize="13sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_create_itemname" />
+                    <TextView
+                        android:id="@+id/tv_create_itemname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/notosanskr_medium"
+                        android:lineHeight="27dp"
+                        android:text="@string/create_itemname"
+                        android:textColor="@color/black02_29cm"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/et_create_ordernumber" />
 
-                <TextView
-                    android:id="@+id/tv_create_purchasemethod"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:fontFamily="@font/notosanskr_medium"
-                    android:lineHeight="27dp"
-                    android:text="@string/create_purchasemethod"
-                    android:textColor="@color/black02_29cm"
-                    android:textSize="13sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_create_orderdate" />
+                    <TextView
+                        android:id="@+id/tv_create_orderdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/notosanskr_medium"
+                        android:lineHeight="27dp"
+                        android:text="@string/create_orderdate"
+                        android:textColor="@color/black02_29cm"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_create_itemname" />
 
+                    <TextView
+                        android:id="@+id/tv_create_purchasemethod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/notosanskr_medium"
+                        android:lineHeight="27dp"
+                        android:text="@string/create_purchasemethod"
+                        android:textColor="@color/black02_29cm"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_create_orderdate" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view_create_divisor5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@color/line_grey_29cm"
+                    app:layout_constraintTop_toBottomOf="@id/constraintlayout_create_orderinfo2" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <View
-                android:id="@+id/view_create_divisor5"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="21dp"
-                android:background="@color/line_grey_29cm"
-                app:layout_constraintTop_toBottomOf="@id/constraintlayout_create_orderinfo2" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintlayout_create_userinfo"
                 android:layout_width="match_parent"
@@ -586,11 +588,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:fontFamily="@font/notosanskr_regular"
+                    android:text="@string/create_username"
                     android:textColor="@color/black02_29cm"
                     android:textSize="13sp"
                     app:layout_constraintStart_toEndOf="@id/tv_create_name"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:text="김주연" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/tv_create_id"
@@ -611,11 +613,11 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/notosanskr_regular"
+                    android:text="@string/create_userid"
                     android:textColor="@color/black02_29cm"
                     android:textSize="13sp"
                     app:layout_constraintStart_toEndOf="@id/tv_create_id"
-                    app:layout_constraintTop_toBottomOf="@id/tv_create_username"
-                    tools:text="tina1705@naver.com [YELLOW]" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_create_username" />
 
                 <TextView
                     android:id="@+id/tv_create_email"
@@ -636,11 +638,11 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/notosanskr_regular"
+                    android:text="@string/create_useremail"
                     android:textColor="@color/black02_29cm"
                     android:textSize="13sp"
                     app:layout_constraintStart_toEndOf="@id/tv_create_id"
-                    app:layout_constraintTop_toBottomOf="@id/tv_create_userid"
-                    tools:text="tina1705@naver.com" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_create_userid" />
 
                 <Button
                     android:id="@+id/button_create_changeemail"
