@@ -15,6 +15,8 @@
 
 
 
-### 
 
+### 4) 협업 전략
+<img src="https://user-images.githubusercontent.com/81347125/169506324-96600d2a-8de4-4901-bb7b-bc73ec51f6a8.png" width = "30%">
 
+##### - git flow 전략에 맞추어 진행
