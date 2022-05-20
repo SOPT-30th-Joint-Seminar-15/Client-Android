@@ -15,9 +15,14 @@
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/create_edittext_custom.xml" value="0.116" />
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/create_ellipse_custom.xml" value="0.16" />
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/create_ellipse_custom2.xml" value="0.1625" />
-        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout/activity_create.xml" value="0.31389252948885976" />
+        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/create_ellipsered_custom.xml" value="0.1" />
+        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/create_radiobutton_background.xml" value="0.1215" />
+        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout/activity_create.xml" value="0.24537037037037038" />
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout/activity_read.xml" value="0.22870370370370371" />
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout/dialog_create.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout/dialog_createask.xml" value="0.2" />
+        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout/dialog_read.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout/inquiry_toolbar.xml" value="0.23385416666666667" />
         <entry key="..\:/Users/82109/Desktop/and/joint15_29cm/app/src/main/res/font/fontfamily.xml" value="0.20092592592592592" />
       </map>
     </option>

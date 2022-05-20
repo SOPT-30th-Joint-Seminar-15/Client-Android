@@ -1,16 +1,20 @@
 package sopt.org.joint15_29cm.util
 
 import android.app.Dialog
+import android.content.ContentValues.TAG
+import android.util.Log
 import android.view.Window
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import sopt.org.joint15_29cm.databinding.DialogCreateBinding
+import sopt.org.joint15_29cm.databinding.DialogCreateaskBinding
 import sopt.org.joint15_29cm.databinding.DialogReadBinding
 import sopt.org.joint15_29cm.feature.mino.ReadActivity
 
 class CustomDialog(private val context: AppCompatActivity) {
     private lateinit var binding: DialogCreateBinding
     private lateinit var bindingReadBinding: DialogReadBinding
+    private lateinit var bindingCreateAskBinding : DialogCreateaskBinding
     private val dialog = Dialog(context)
 
     fun showCreateDialog(@LayoutRes layout: Int) {
@@ -27,6 +31,23 @@ class CustomDialog(private val context: AppCompatActivity) {
         }
         dialog.show()
     }
+
+    fun showCreateAskDialog(@LayoutRes layout: Int, text : String) {
+        bindingCreateAskBinding = DialogCreateaskBinding.inflate(context.layoutInflater)
+        bindingCreateAskBinding.tvCreateAskcontent.text=text
+        Log.d(TAG,"CustomDialog - showCreateAskDialog() called text= ${text}")
+        dialog.apply {
+
+            requestWindowFeature(Window.FEATURE_NO_TITLE)
+            setContentView(bindingCreateAskBinding.root)
+            setCancelable(false)
+        }
+        bindingCreateAskBinding.ivCreateAskclose.setOnClickListener {
+            dialog.dismiss()
+        }
+        dialog.show()
+    }
+
 
     fun showReadDialog(@LayoutRes layout: Int) {
         bindingReadBinding = DialogReadBinding.inflate(context.layoutInflater)
