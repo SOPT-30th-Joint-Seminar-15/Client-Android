@@ -81,15 +81,12 @@ class CreateActivity : AppCompatActivity() {
                     //하나가 체크되면 나머지 다 체크 풀기
                     for (x in 0 until i) {
                         radioButtonList[x].isChecked = false
-
                     }
                     for (x in i + 1 until radioButtonList.size) {
                         radioButtonList[x].isChecked = false
-
                     }
                     checkedTitle=radioButtonList[i].text.toString()
                 }
-
             }
     }
 

@@ -24,6 +24,10 @@
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout/dialog_read.xml" value="0.11041666666666666" />
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout/inquiry_toolbar.xml" value="0.23385416666666667" />
         <entry key="..\:/Users/82109/Desktop/and/joint15_29cm/app/src/main/res/font/fontfamily.xml" value="0.20092592592592592" />
+        <entry key="app/src/main/res/layout/activity_create.xml" value="0.21532745361328126" />
+        <entry key="app/src/main/res/layout/activity_read.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/dialog_create.xml" value="0.2875" />
+        <entry key="app/src/main/res/layout/item_consulting_recyclerview.xml" value="0.1" />
       </map>
     </option>
   </component>
