@@ -5,7 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.LifecycleOwner
 import sopt.org.joint15_29cm.R
 import sopt.org.joint15_29cm.databinding.ActivityCreateBinding
 import sopt.org.joint15_29cm.feature.mino.ReadActivity
@@ -15,6 +17,8 @@ import java.time.LocalDate
 class CreateActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCreateBinding
     private var checkedTitle : String ?= null
+    private var nowTypeNum: Int?=null
+    private var prevTypeNum: Int ?= null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCreateBinding.inflate(layoutInflater)
@@ -74,18 +78,19 @@ class CreateActivity : AppCompatActivity() {
         for (i in radioButtonList.indices)
             radioButtonList[i].setOnCheckedChangeListener { _, isChecked ->
                 if (radioButtonList[i].isChecked) {
+
                     if (i in 0..7)
                         binding.constraintlayoutCreateOrderinfo.visibility = View.VISIBLE
                     else
                         binding.constraintlayoutCreateOrderinfo.visibility = View.GONE
                     //하나가 체크되면 나머지 다 체크 풀기
-                    for (x in 0 until i) {
-                        radioButtonList[x].isChecked = false
-                    }
-                    for (x in i + 1 until radioButtonList.size) {
-                        radioButtonList[x].isChecked = false
-                    }
+                    nowTypeNum=i
+
+                    if(prevTypeNum!=null && nowTypeNum!=null)
+                        radioButtonList[prevTypeNum!!].isChecked=false
+
                     checkedTitle=radioButtonList[i].text.toString()
+                    prevTypeNum=nowTypeNum
                 }
             }
     }
