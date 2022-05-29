@@ -57,14 +57,14 @@ class ReadActivity : AppCompatActivity() {
                     date = "2022-05-13",
                     type = "문의하기",
                     inquiryMessage = "안녕하세요",
-                    answerMessage = "반가워요"
+                    answerMessage = null
                 ),
                 InquiryData(
                     id = 2,
                     date = "2022-05-14",
-                    type = "문의",
+                    type = "문의안하기",
                     inquiryMessage = "안녕",
-                    answerMessage = null
+                    answerMessage = "반가워요"
                 )
             )
         )
