@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import sopt.org.joint15_29cm.data.remote.twenty_nine_cm.TwentyNineService
 
 object ServiceCreator {
-    private val baseUrl = "15.164.163.246:8000"
+    private val baseUrl = "http://15.164.163.246:8000"
     private val retrofit: Retrofit = Retrofit.Builder()
         .baseUrl(baseUrl)
         .addConverterFactory(GsonConverterFactory.create())
