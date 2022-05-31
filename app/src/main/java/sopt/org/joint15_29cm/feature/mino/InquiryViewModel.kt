@@ -1,14 +1,12 @@
 package sopt.org.joint15_29cm.feature.mino
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.*
+import kotlinx.coroutines.flow.*
+import retrofit2.Response
+import sopt.org.joint15_29cm.data.remote.ServiceCreator
+import sopt.org.joint15_29cm.data.remote.models.ResponseInquiryData
+import sopt.org.joint15_29cm.util.ResponseWrapper
 
 class InquiryViewModel : ViewModel() {
-    private val inquiryList = MutableLiveData<List<InquiryData>>()
-
-    fun getInquiryList(): LiveData<List<InquiryData>> = inquiryList
-    fun setInquiryList(data: List<InquiryData>) {
-        inquiryList.value = data
-    }
+    val inquiry:Flow<Response<ResponseWrapper<List<ResponseInquiryData>>>> = ServiceCreator.getList
 }

@@ -1,5 +1,6 @@
 package sopt.org.joint15_29cm.feature.mino
 
+import android.view.View
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import coil.load
@@ -21,6 +22,13 @@ object BindingConversions {
                     size(450, 450)
                 }
             }
+        }
+    }
+    @JvmStatic
+    @BindingAdapter("visible")
+    fun setVisibility(view: View, isExpanded:Boolean){
+        if(view.visibility == View.VISIBLE){
+
         }
     }
 }
