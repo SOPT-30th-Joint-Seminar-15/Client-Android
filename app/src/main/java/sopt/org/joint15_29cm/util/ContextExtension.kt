@@ -36,6 +36,7 @@ fun <ResponseType> Call<ResponseType>.enqueueUtil(
         }
     })
 }
+
 @ExperimentalCoroutinesApi
 fun <T> Call<T>.asCallbackFLow() = callbackFlow<T> {
     enqueue(object : Callback<T> {
@@ -54,6 +55,5 @@ fun <T> Call<T>.asCallbackFLow() = callbackFlow<T> {
             close(throwable)
         }
     })
-
     awaitClose() //close가 호출될때까지 기다립니다.
 }

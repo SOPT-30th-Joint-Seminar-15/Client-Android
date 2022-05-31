@@ -22,19 +22,4 @@ object ServiceCreator {
 
     val getList: Flow<Response<ResponseWrapper<List<ResponseInquiryData>>>>
         get() = flow { emit(twentyNineService.getInquiryList("628f2a4174995ed500bc18e9")) }
-
-    private fun getGson(): Gson {
-        val gsonBuilder = GsonBuilder()
-        gsonBuilder.registerTypeAdapter(Int::class.java, EmptyStringToNumberTypeAdapter())
-            .registerTypeAdapter(
-                Int::class.javaPrimitiveType,
-                EmptyStringToNumberTypeAdapter()
-            )
-            .registerTypeAdapter(
-                Double::class.javaPrimitiveType,
-                EmptyStringToNumberTypeAdapter()
-            )
-            .registerTypeAdapter(Double::class.java, EmptyStringToNumberTypeAdapter())
-        return gsonBuilder.create()
-    }
 }
