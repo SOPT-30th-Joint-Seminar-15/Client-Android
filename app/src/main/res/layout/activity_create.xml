@@ -495,6 +495,7 @@
                         android:clickable="false"
                         android:cursorVisible="false"
                         android:focusable="false"
+                        android:textSize="12sp"
                         android:focusableInTouchMode="false"
                         app:layout_constraintEnd_toStartOf="@id/button_create_ordernumber"
                         app:layout_constraintStart_toStartOf="parent"

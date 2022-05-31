@@ -1,5 +1,6 @@
 package sopt.org.joint15_29cm.feature.zyoung
 
+import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
@@ -8,11 +9,20 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LifecycleOwner
+import okhttp3.OkHttp
+import okhttp3.OkHttpClient
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import sopt.org.joint15_29cm.R
+import sopt.org.joint15_29cm.data.remote.ServiceCreator
+import sopt.org.joint15_29cm.data.remote.twenty_nine_cm.models.ResponseOrderInfo
 import sopt.org.joint15_29cm.databinding.ActivityCreateBinding
 import sopt.org.joint15_29cm.feature.mino.ReadActivity
 import sopt.org.joint15_29cm.util.CustomDialog
+import java.text.SimpleDateFormat
 import java.time.LocalDate
+import java.util.*
 
 class CreateActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCreateBinding
@@ -26,6 +36,7 @@ class CreateActivity : AppCompatActivity() {
 
         initDialog()
         initControlRadioButtons()
+        orderNumClicked()
     }
 
     private fun initDialog() {
@@ -105,9 +116,41 @@ class CreateActivity : AppCompatActivity() {
         setResult(RESULT_OK, intent)
     }
 
-    private fun getRemoteOrder(){
+    private fun orderNumClicked(){
         binding.buttonCreateOrdernumber.setOnClickListener {
-
+            Log.d(TAG,"CreateActivity - orderNumClicked() called")
+            getRemoteOrder()
         }
+    }
+
+    private fun getRemoteOrder(){
+        Log.d(TAG,"CreateActivity - getRemoteOrder() called")
+        val call : Call<ResponseOrderInfo> = ServiceCreator.twentyNineService.getOrderInfo("629047fd59c4d04df8dab4aa")
+        call.enqueue(object : Callback<ResponseOrderInfo>{
+            override fun onResponse(
+                call: Call<ResponseOrderInfo>,
+                response: Response<ResponseOrderInfo>
+            ) {
+               if(response.isSuccessful){
+                   val data= response.body()!!.data[0]
+                   binding.etCreateOrdernumber.setText(data._id)
+                   binding.tvCreateOrderitemname.text=data.productName
+                   binding.tvCreateOrderitemdate.text=dateToString(data.orderDate)
+                   binding.tvCreateOrderpurchasemethod.text=data.payMethod
+               }
+
+            }
+
+            override fun onFailure(call: Call<ResponseOrderInfo>, t: Throwable) {
+                Log.d(TAG,"CreateActivity - onFailure() called t=$t")
+            }
+
+        })
+    }
+
+    private fun dateToString(date : Date): String {
+        val sdf = SimpleDateFormat("yyyy-MM-dd")
+        val newDate : String = sdf.format(date)
+        return newDate
     }
 }
