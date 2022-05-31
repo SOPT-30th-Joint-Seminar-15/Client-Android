@@ -515,17 +515,30 @@
                         app:layout_constraintTop_toBottomOf="@id/tv_ordernumber" />
 
                     <TextView
-                        android:id="@+id/tv_create_itemname"
+                    android:id="@+id/tv_create_itemname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/notosanskr_medium"
+                    android:lineHeight="27dp"
+                    android:text="@string/create_itemname"
+                    android:textColor="@color/black02_29cm"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_create_ordernumber" />
+
+                    <TextView
+                        android:id="@+id/tv_create_orderitemname"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:fontFamily="@font/notosanskr_medium"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/notosanskr_regular"
                         android:lineHeight="27dp"
-                        android:text="@string/create_itemname"
+                        tools:text="@string/create_itemname"
                         android:textColor="@color/black02_29cm"
                         android:textSize="13sp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/et_create_ordernumber" />
+                        app:layout_constraintTop_toBottomOf="@id/tv_create_itemname" />
 
                     <TextView
                         android:id="@+id/tv_create_orderdate"
@@ -538,7 +551,20 @@
                         android:textColor="@color/black02_29cm"
                         android:textSize="13sp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_create_itemname" />
+                        app:layout_constraintTop_toBottomOf="@id/tv_create_orderitemname" />
+
+                    <TextView
+                        android:id="@+id/tv_create_orderitemdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:lineHeight="27dp"
+                        tools:text="@string/create_orderdate"
+                        android:textColor="@color/black02_29cm"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_create_orderdate" />
 
                     <TextView
                         android:id="@+id/tv_create_purchasemethod"
@@ -551,7 +577,20 @@
                         android:textColor="@color/black02_29cm"
                         android:textSize="13sp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_create_orderdate" />
+                        app:layout_constraintTop_toBottomOf="@id/tv_create_orderitemdate" />
+
+                    <TextView
+                        android:id="@+id/tv_create_orderpurchasemethod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:lineHeight="27dp"
+                        tools:text="@string/create_purchasemethod"
+                        android:textColor="@color/black02_29cm"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_create_purchasemethod" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

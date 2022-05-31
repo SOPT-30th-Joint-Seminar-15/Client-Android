@@ -104,4 +104,10 @@ class CreateActivity : AppCompatActivity() {
         intent.putExtra("data",data)
         setResult(RESULT_OK, intent)
     }
+
+    private fun getRemoteOrder(){
+        binding.buttonCreateOrdernumber.setOnClickListener {
+
+        }
+    }
 }
