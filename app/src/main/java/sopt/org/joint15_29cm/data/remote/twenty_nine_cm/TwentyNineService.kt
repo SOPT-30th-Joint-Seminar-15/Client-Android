@@ -9,18 +9,18 @@ import sopt.org.joint15_29cm.data.remote.models.ResponseInquiryData
 import sopt.org.joint15_29cm.data.remote.models.ResponseOrderInfo
 import sopt.org.joint15_29cm.util.ResponseWrapper
 
-interface TwentyNineService{
+interface TwentyNineService {
 
     @GET("user/{userId}/inquiry")
-     suspend fun getInquiryList(
+    suspend fun getInquiryList(
         @Path("userId") userId: String
     ): Response<ResponseWrapper<List<ResponseInquiryData>>>
 
     @DELETE("inquiry/{inquiryId}")
     suspend fun removeInquiryItem(
         @Path("inquiryId") inquiryId: String
-    ): Response<List<ResponseInquiryData>>
-  
+    ): Response<ResponseWrapper<Unit>>
+
     @GET("/order/{orderNum}")
     fun getOrderInfo(@Path("orderNum") orderNum: String): Call<ResponseOrderInfo>
 

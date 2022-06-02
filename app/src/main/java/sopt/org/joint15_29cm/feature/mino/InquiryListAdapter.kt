@@ -11,7 +11,7 @@ import sopt.org.joint15_29cm.databinding.ItemConsultingRecyclerviewBinding
 
 class InquiryListAdapter(
     private val layoutClickListener: (ResponseInquiryData, LinearLayout) -> Unit,
-    private val itemClickListener: () -> Unit
+    private val itemClickListener: (ResponseInquiryData) -> Unit
 ) :
     ListAdapter<ResponseInquiryData, InquiryListAdapter.InquiryViewHolder>(InquiryListDiffUtil) {
 
@@ -31,7 +31,7 @@ class InquiryListAdapter(
     class InquiryViewHolder(
         private val binding: ItemConsultingRecyclerviewBinding,
         private val layoutClickListener: (ResponseInquiryData, LinearLayout) -> Unit,
-        private val itemClickListener: () -> Unit
+        private val itemClickListener: (userItem: ResponseInquiryData) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: ResponseInquiryData) {
@@ -41,33 +41,28 @@ class InquiryListAdapter(
                     layoutClickListener(item, itemLayoutDetail)
                 }
                 btnItemDelete.setOnClickListener {
-                    itemClickListener()
-                    currentPosition = adapterPosition
+                    itemClickListener(item)
                 }
             }
-        }
-    }
-
-    fun removeItem() {
-        currentPosition?.let {
-            val newList = currentList.toMutableList()
-            newList.removeAt(currentPosition!!)
-            submitList(newList)
         }
     }
 
     companion object {
         object InquiryListDiffUtil :
             DiffUtil.ItemCallback<ResponseInquiryData>() {
-            override fun areItemsTheSame(oldItem: ResponseInquiryData, newItem: ResponseInquiryData): Boolean {
+            override fun areItemsTheSame(
+                oldItem: ResponseInquiryData,
+                newItem: ResponseInquiryData
+            ): Boolean {
                 return oldItem.inquiryId == newItem.inquiryId
             }
 
-            override fun areContentsTheSame(oldItem: ResponseInquiryData, newItem: ResponseInquiryData): Boolean {
+            override fun areContentsTheSame(
+                oldItem: ResponseInquiryData,
+                newItem: ResponseInquiryData
+            ): Boolean {
                 return oldItem == newItem
             }
         }
-
-        var currentPosition: Int? = null
     }
 }
