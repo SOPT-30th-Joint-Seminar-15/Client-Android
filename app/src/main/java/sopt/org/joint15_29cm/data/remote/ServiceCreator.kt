@@ -1,13 +1,11 @@
 package sopt.org.joint15_29cm.data.remote
 
-import android.util.Log
-import coil.request.SuccessResult
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.stateIn
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
