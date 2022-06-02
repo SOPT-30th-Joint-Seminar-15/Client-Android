@@ -1,4 +1,4 @@
-package sopt.org.joint15_29cm.data.remote.twenty_nine_cm.models
+package sopt.org.joint15_29cm.data.remote.models
 
 import java.util.*
 

@@ -1,22 +1,21 @@
 package sopt.org.joint15_29cm.feature.zyoung
 
-import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.LifecycleOwner
-import okhttp3.OkHttp
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import sopt.org.joint15_29cm.R
 import sopt.org.joint15_29cm.data.remote.ServiceCreator
-import sopt.org.joint15_29cm.data.remote.twenty_nine_cm.models.ResponseOrderInfo
+import sopt.org.joint15_29cm.data.remote.models.RequestInquiryData
+import sopt.org.joint15_29cm.data.remote.models.ResponseCreateInquiryData
+import sopt.org.joint15_29cm.data.remote.models.ResponseOrderInfo
 import sopt.org.joint15_29cm.databinding.ActivityCreateBinding
 import sopt.org.joint15_29cm.feature.mino.ReadActivity
 import sopt.org.joint15_29cm.util.CustomDialog
@@ -37,6 +36,7 @@ class CreateActivity : AppCompatActivity() {
         initDialog()
         initControlRadioButtons()
         orderNumClicked()
+
     }
 
     private fun initDialog() {
@@ -57,10 +57,10 @@ class CreateActivity : AppCompatActivity() {
                 return@setOnClickListener
             } //내용을 입력하지 않은 경우
 
-
+                postInquiry()
                 val dialog = CustomDialog(this)
                 dialog.showCreateDialog(R.layout.dialog_create)
-                setIntent()
+
         }
     }
 
@@ -106,25 +106,51 @@ class CreateActivity : AppCompatActivity() {
             }
     }
 
-    private fun getCurrentDate() : String = LocalDate.now().toString()
+
+    private fun postInquiry(){
+        val requestInquiryData = RequestInquiryData(
+            userId="628eef9e74995ed500bc18c7",
+        email=binding.tvCreateUseremail.text.toString(),
+       inquiryCategory=checkedTitle!!,
+         orderNum=binding.etCreateOrdernumber.text.toString(),
+        title=binding.etCreateAsktitle.text.toString(),
+         content=binding.etCreateAskcontent.text.toString(),
+        isSubscribed=binding.checkboxCreateCheckemail.isChecked
+        )
+
+
+        val call:Call<ResponseCreateInquiryData> = ServiceCreator.twentyNineService.postInquityData(requestInquiryData)
+        call.enqueue(object: Callback<ResponseCreateInquiryData>{
+            override fun onResponse(
+                call: Call<ResponseCreateInquiryData>,
+                response: Response<ResponseCreateInquiryData>
+            ) {
+                if(response.isSuccessful){
+                    setIntent()
+                }
+            }
+
+            override fun onFailure(call: Call<ResponseCreateInquiryData>, t: Throwable) {
+                Log.d(TAG,"CreateActivity - onFailure() called t:$t")
+            }
+
+        })
+
+    }
 
     private fun setIntent(){
-        val intent= Intent(this, ReadActivity::class.java)
-
-        val data=RequiryData(0, getCurrentDate(), checkedTitle!!, binding.etCreateAskcontent.text.toString(), binding.checkboxCreateCheckemail.isChecked)
-        intent.putExtra("data",data)
-        setResult(RESULT_OK, intent)
+        startActivity(Intent(this, ReadActivity::class.java))
     }
 
     private fun orderNumClicked(){
         binding.buttonCreateOrdernumber.setOnClickListener {
-            Log.d(TAG,"CreateActivity - orderNumClicked() called")
+            //Log.d(TAG,"CreateActivity - orderNumClicked() called")
             getRemoteOrder()
         }
     }
 
     private fun getRemoteOrder(){
-        Log.d(TAG,"CreateActivity - getRemoteOrder() called")
+        //Log.d(TAG,"CreateActivity - getRemoteOrder() called")
         val call : Call<ResponseOrderInfo> = ServiceCreator.twentyNineService.getOrderInfo("629047fd59c4d04df8dab4aa")
         call.enqueue(object : Callback<ResponseOrderInfo>{
             override fun onResponse(
