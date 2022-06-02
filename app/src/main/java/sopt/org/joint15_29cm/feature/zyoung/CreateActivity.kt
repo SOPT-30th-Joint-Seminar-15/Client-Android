@@ -120,7 +120,7 @@ class CreateActivity : AppCompatActivity() {
         isSubscribed=binding.checkboxCreateCheckemail.isChecked
         )
 
-        Log.d(TAG,"CreateActivity - onResponse() called request =$requestInquiryData")
+        //Log.d(TAG,"CreateActivity - onResponse() called request =$requestInquiryData")
 
         val call:Call<ResponseCreateInquiryData> = ServiceCreator.twentyNineService.postInquityData(requestInquiryData)
         call.enqueue(object: Callback<ResponseCreateInquiryData>{
@@ -129,7 +129,7 @@ class CreateActivity : AppCompatActivity() {
                 response: Response<ResponseCreateInquiryData>
             ) {
                 if(response.isSuccessful){
-
+                    //Log.d(TAG,"CreateActivity - onResponse() called request:$requestInquiryData")
                     setIntent()
                 }
             }
@@ -177,6 +177,5 @@ class CreateActivity : AppCompatActivity() {
 
         })
     }
-
 
 }
