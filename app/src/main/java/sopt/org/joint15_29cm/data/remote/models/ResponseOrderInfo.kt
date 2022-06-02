@@ -12,7 +12,7 @@ data class ResponseOrderInfo(
         val _id : String,
         val userId : String,
         val productName : String,
-        val orderDate : Date,
+        val orderDate : String,
         val payMethod : String
     )
 }

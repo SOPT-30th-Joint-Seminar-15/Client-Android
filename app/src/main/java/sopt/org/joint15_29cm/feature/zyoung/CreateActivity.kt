@@ -112,12 +112,15 @@ class CreateActivity : AppCompatActivity() {
             userId="628eef9e74995ed500bc18c7",
         email=binding.tvCreateUseremail.text.toString(),
        inquiryCategory=checkedTitle!!,
-         orderNum=binding.etCreateOrdernumber.text.toString(),
+         orderNum=binding.etCreateOrdernumber.text.toString().let {
+             "6290492b59c4d04df8dab4ae"
+         },
         title=binding.etCreateAsktitle.text.toString(),
          content=binding.etCreateAskcontent.text.toString(),
         isSubscribed=binding.checkboxCreateCheckemail.isChecked
         )
 
+        Log.d(TAG,"CreateActivity - onResponse() called request =$requestInquiryData")
 
         val call:Call<ResponseCreateInquiryData> = ServiceCreator.twentyNineService.postInquityData(requestInquiryData)
         call.enqueue(object: Callback<ResponseCreateInquiryData>{
@@ -126,6 +129,7 @@ class CreateActivity : AppCompatActivity() {
                 response: Response<ResponseCreateInquiryData>
             ) {
                 if(response.isSuccessful){
+
                     setIntent()
                 }
             }
@@ -161,7 +165,7 @@ class CreateActivity : AppCompatActivity() {
                    val data= response.body()!!.data[0]
                    binding.etCreateOrdernumber.setText(data._id)
                    binding.tvCreateOrderitemname.text=data.productName
-                   binding.tvCreateOrderitemdate.text=dateToString(data.orderDate)
+                   binding.tvCreateOrderitemdate.text=data.orderDate.substring(0,10)
                    binding.tvCreateOrderpurchasemethod.text=data.payMethod
                }
 
@@ -174,9 +178,5 @@ class CreateActivity : AppCompatActivity() {
         })
     }
 
-    private fun dateToString(date : Date): String {
-        val sdf = SimpleDateFormat("yyyy-MM-dd")
-        val newDate : String = sdf.format(date)
-        return newDate
-    }
+
 }
