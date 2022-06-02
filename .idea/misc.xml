@@ -12,11 +12,18 @@
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/create_button2_custom.xml" value="0.118" />
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/create_button_background.xml" value="0.118" />
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/create_button_custom.xml" value="0.118" />
+        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/create_checkbox_selector.xml" value="0.1525" />
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/create_edittext_custom.xml" value="0.116" />
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/create_ellipse_custom.xml" value="0.16" />
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/create_ellipse_custom2.xml" value="0.1625" />
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/create_ellipsered_custom.xml" value="0.1" />
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/create_radiobutton_background.xml" value="0.1215" />
+        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/ic_icn_button_off.xml" value="0.1525" />
+        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/ic_icn_button_on.xml" value="0.1525" />
+        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/ic_icn_search.xml" value="0.1525" />
+        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/ic_icn_selectbox_off.xml" value="0.1525" />
+        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/ic_icn_selectbox_on.xml" value="0.1525" />
+        <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/drawable/stroke_btn_basic.xml" value="0.1525" />
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout/activity_create.xml" value="0.24537037037037038" />
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout/activity_read.xml" value="0.22870370370370371" />
         <entry key="..\:/Users/82103/Documents/29cm/Client-Android/app/src/main/res/layout/dialog_create.xml" value="0.24947916666666667" />
@@ -27,7 +34,6 @@
         <entry key="app/src/main/res/layout/activity_create.xml" value="0.21532745361328126" />
         <entry key="app/src/main/res/layout/activity_read.xml" value="0.165" />
         <entry key="app/src/main/res/layout/dialog_create.xml" value="0.2875" />
-        <entry key="app/src/main/res/layout/dialog_read.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/inquiry_toolbar.xml" value="0.165" />
         <entry key="app/src/main/res/layout/item_consulting_recyclerview.xml" value="0.1" />
       </map>

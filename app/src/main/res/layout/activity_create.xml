@@ -735,7 +735,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@android:color/transparent"
                 android:button="@null"
-                android:drawableStart="@drawable/ic_icn_selectbox_off"
+                android:drawableStart="@drawable/create_checkbox_selector"
                 android:drawablePadding="9dp"
                 android:fontFamily="@font/notosanskr_regular"
                 android:text="@string/create_getemail"
