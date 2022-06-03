@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -19,6 +20,7 @@ import sopt.org.joint15_29cm.data.remote.models.ResponseOrderInfo
 import sopt.org.joint15_29cm.databinding.ActivityCreateBinding
 import sopt.org.joint15_29cm.feature.mino.ReadActivity
 import sopt.org.joint15_29cm.util.CustomDialog
+import sopt.org.joint15_29cm.util.shortToast
 import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.util.*
@@ -130,7 +132,7 @@ class CreateActivity : AppCompatActivity() {
             ) {
                 if(response.isSuccessful){
                     //Log.d(TAG,"CreateActivity - onResponse() called request:$requestInquiryData")
-                    setIntent()
+                    Log.d(TAG,"CreateActivity - onResponse() , response is successful")
                 }
             }
 
@@ -140,10 +142,6 @@ class CreateActivity : AppCompatActivity() {
 
         })
 
-    }
-
-    private fun setIntent(){
-        startActivity(Intent(this, ReadActivity::class.java))
     }
 
     private fun orderNumClicked(){

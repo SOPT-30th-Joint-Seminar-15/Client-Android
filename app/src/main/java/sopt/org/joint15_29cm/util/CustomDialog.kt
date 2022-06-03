@@ -2,15 +2,15 @@ package sopt.org.joint15_29cm.util
 
 import android.app.Dialog
 import android.content.ContentValues.TAG
+import android.content.Intent
 import android.util.Log
 import android.view.Window
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
-import sopt.org.joint15_29cm.data.remote.ServiceCreator
 import sopt.org.joint15_29cm.databinding.DialogCreateBinding
 import sopt.org.joint15_29cm.databinding.DialogCreateaskBinding
 import sopt.org.joint15_29cm.databinding.DialogReadBinding
@@ -21,7 +21,6 @@ class CustomDialog(private val context: AppCompatActivity) {
     private lateinit var bindingReadBinding: DialogReadBinding
     private lateinit var bindingCreateAskBinding: DialogCreateaskBinding
     private val dialog = Dialog(context)
-
     fun showCreateDialog(@LayoutRes layout: Int) {
         binding = DialogCreateBinding.inflate(context.layoutInflater)
 
@@ -33,6 +32,7 @@ class CustomDialog(private val context: AppCompatActivity) {
         binding.tvCreateOk.setOnClickListener {
             dialog.dismiss()
             context.finish()
+            context.startActivity(Intent(context, ReadActivity::class.java))
         }
         dialog.show()
     }
